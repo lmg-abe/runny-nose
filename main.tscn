@@ -15,4 +15,5 @@ position = Vector2(1306.9999, 228)
 scale = Vector2(9.345, 1)
 
 [node name="Runny" parent="." unique_id=1298635211 instance=ExtResource("2_1bvp3")]
+position = Vector2(905, 59)
 script = ExtResource("3_lquwl")
