@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ddcerhvh5os1u"]
+
+[ext_resource type="PackedScene" uid="uid://2tqto0h1b7if" path="res://floor.tscn" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cb0enpjyg35ns" path="res://runny.tscn" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://bwdlr4xoffopo" path="res://player_movement.gd" id="3_lquwl"]
+
+[node name="main" type="Node2D" unique_id=118560218]
+
+[node name="Floor" parent="." unique_id=838538383 instance=ExtResource("1_h2yge")]
+position = Vector2(588, 552)
+scale = Vector2(9.345, 1)
+
+[node name="Floor2" parent="." unique_id=840235148 instance=ExtResource("1_h2yge")]
+position = Vector2(1306.9999, 228)
+scale = Vector2(9.345, 1)
+
+[node name="Runny" parent="." unique_id=1298635211 instance=ExtResource("2_1bvp3")]
+script = ExtResource("3_lquwl")
