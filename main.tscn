@@ -3,6 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://2tqto0h1b7if" path="res://floor.tscn" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cb0enpjyg35ns" path="res://runny.tscn" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://bwdlr4xoffopo" path="res://player_movement.gd" id="3_lquwl"]
+[ext_resource type="Script" uid="uid://5it2uxyvfgis" path="res://cameraFollow.gd" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://b32c5euv7m8ns" path="res://icon.svg" id="5_lquwl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frgu1"]
+size = Vector2(128, 128)
 
 [node name="main" type="Node2D" unique_id=118560218]
 
@@ -14,6 +19,29 @@ scale = Vector2(9.345, 1)
 position = Vector2(1306.9999, 228)
 scale = Vector2(9.345, 1)
 
+[node name="Floor3" parent="." unique_id=1950045718 instance=ExtResource("1_h2yge")]
+position = Vector2(321.99997, 283)
+rotation = 0.90782464
+scale = Vector2(9.345, 1)
+
 [node name="Runny" parent="." unique_id=1298635211 instance=ExtResource("2_1bvp3")]
-position = Vector2(905, 59)
+position = Vector2(898, 66)
+floor_max_angle = 1.4067354
 script = ExtResource("3_lquwl")
+playerSpeed = 150
+friction = 0.9
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=758760835]
+position = Vector2(684, 113)
+zoom = Vector2(0.5, 0.5)
+script = ExtResource("4_1bvp3")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1073654291]
+position = Vector2(57, -408)
+gravity_scale = 2.0
+
+[node name="Icon" type="Sprite2D" parent="RigidBody2D" unique_id=133866622]
+texture = ExtResource("5_lquwl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=722882572]
+shape = SubResource("RectangleShape2D_frgu1")
