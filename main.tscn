@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://2tqto0h1b7if" path="res://floor.tscn" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cb0enpjyg35ns" path="res://runny.tscn" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://blpj6ovlekaq6" path="res://openAndClose.gd" id="2_kek77"]
+[ext_resource type="Script" uid="uid://pa6468o3rv5a" path="res://button.gd" id="3_5vw27"]
 [ext_resource type="Script" uid="uid://bwdlr4xoffopo" path="res://player_movement.gd" id="3_lquwl"]
 [ext_resource type="Script" uid="uid://5it2uxyvfgis" path="res://cameraFollow.gd" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://b32c5euv7m8ns" path="res://icon.svg" id="5_lquwl"]
@@ -9,6 +11,12 @@
 [ext_resource type="Script" uid="uid://cpqs4s4ixphnm" path="res://death_counter.gd" id="7_272bh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frgu1"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eo4fi"]
+size = Vector2(128, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
 size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
@@ -23,6 +31,52 @@ scale = Vector2(9.345, 1)
 [node name="Floor2" parent="." unique_id=840235148 instance=ExtResource("1_h2yge")]
 position = Vector2(1306.9999, 228)
 scale = Vector2(9.345, 1)
+
+[node name="Floor4" parent="." unique_id=1553731059 instance=ExtResource("1_h2yge")]
+position = Vector2(2283, 128)
+scale = Vector2(4, 1)
+
+[node name="Floor6" parent="." unique_id=859752708 instance=ExtResource("1_h2yge")]
+position = Vector2(1924, -312)
+scale = Vector2(4, 1)
+
+[node name="Floor7" parent="." unique_id=1539839850 instance=ExtResource("1_h2yge")]
+position = Vector2(3661, -712)
+scale = Vector2(4, 1)
+
+[node name="Floor9" parent="." unique_id=49349976 instance=ExtResource("1_h2yge")]
+position = Vector2(6314, -716)
+scale = Vector2(4, 1)
+
+[node name="Door" type="StaticBody2D" parent="." unique_id=1293151393]
+position = Vector2(6339, -442)
+scale = Vector2(1, 4)
+script = ExtResource("2_kek77")
+
+[node name="Icon" type="Sprite2D" parent="Door" unique_id=593203618]
+texture = ExtResource("5_lquwl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1103333765]
+shape = SubResource("RectangleShape2D_frgu1")
+
+[node name="Button" type="Area2D" parent="." unique_id=1813391479]
+position = Vector2(5981, -243)
+script = ExtResource("3_5vw27")
+
+[node name="Icon" type="Sprite2D" parent="Button" unique_id=1540617976]
+scale = Vector2(1, 0.5)
+texture = ExtResource("5_lquwl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button" unique_id=523426723]
+shape = SubResource("RectangleShape2D_eo4fi")
+
+[node name="Floor8" parent="." unique_id=458735410 instance=ExtResource("1_h2yge")]
+position = Vector2(4985, -140)
+scale = Vector2(25, 1)
+
+[node name="Floor5" parent="." unique_id=864481972 instance=ExtResource("1_h2yge")]
+position = Vector2(2838, -278)
+scale = Vector2(4, 4)
 
 [node name="Floor3" parent="." unique_id=1950045718 instance=ExtResource("1_h2yge")]
 position = Vector2(321.99997, 283)
@@ -42,14 +96,14 @@ zoom = Vector2(0.5, 0.5)
 script = ExtResource("4_1bvp3")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1073654291]
-position = Vector2(57, -408)
+position = Vector2(58, -762)
 gravity_scale = 2.0
 
 [node name="Icon" type="Sprite2D" parent="RigidBody2D" unique_id=133866622]
 texture = ExtResource("5_lquwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=722882572]
-shape = SubResource("RectangleShape2D_frgu1")
+shape = SubResource("RectangleShape2D_272bh")
 
 [node name="DeathPlane" type="Area2D" parent="." unique_id=980809601]
 position = Vector2(122, 1749)
@@ -86,4 +140,6 @@ size_flags_vertical = 0
 text = "test"
 script = ExtResource("7_272bh")
 
+[connection signal="body_entered" from="Button" to="Button" method="_on_body_entered"]
+[connection signal="body_exited" from="Button" to="Button" method="_on_body_exited"]
 [connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]
