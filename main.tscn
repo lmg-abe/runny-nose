@@ -60,7 +60,7 @@ texture = ExtResource("5_lquwl")
 shape = SubResource("RectangleShape2D_frgu1")
 
 [node name="Button" type="Area2D" parent="." unique_id=1813391479]
-position = Vector2(5981, -243)
+position = Vector2(5806, -243)
 script = ExtResource("3_5vw27")
 
 [node name="Icon" type="Sprite2D" parent="Button" unique_id=1540617976]

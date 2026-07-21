@@ -6,6 +6,7 @@
 radius = 64.0
 
 [node name="Runny" type="CharacterBody2D" unique_id=1298635211]
+scale = Vector2(1, 2)
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1860541011]
 texture = ExtResource("1_ahjt7")
