@@ -84,7 +84,7 @@ rotation = 0.90782464
 scale = Vector2(9.345, 1)
 
 [node name="Runny" parent="." unique_id=1298635211 instance=ExtResource("2_1bvp3")]
-position = Vector2(898, 66)
+position = Vector2(902, 7)
 floor_max_angle = 1.4067354
 script = ExtResource("3_lquwl")
 playerSpeed = 150
