@@ -2,14 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://b32c5euv7m8ns" path="res://icon.svg" id="1_ahjt7"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_frgu1"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ahjt7"]
 radius = 64.0
+height = 256.0
 
 [node name="Runny" type="CharacterBody2D" unique_id=1298635211]
-scale = Vector2(1, 2)
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1860541011]
+scale = Vector2(1, 2)
 texture = ExtResource("1_ahjt7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1497603080]
-shape = SubResource("CircleShape2D_frgu1")
+shape = SubResource("CapsuleShape2D_ahjt7")

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var playerSpeed : int = 200
-@export var friction : float = 0.8
+@export var playerSpeed : int = 150
+@export var friction : float = 0.9
 @export var dashSpeed : int = 2000
 @export var gravity : int = 100
 @export var jumpSpeed : int = 1200
@@ -11,6 +11,7 @@ extends CharacterBody2D
 var canSneeze : bool = false
 var canDash : bool = false
 var jumpTimer : int = -1
+@export var pushForce = 1500
 
 func _physics_process(delta: float) -> void:
 	velocity.x += Input.get_axis("move_left","move_right") * playerSpeed
@@ -40,4 +41,9 @@ func _physics_process(delta: float) -> void:
 		velocity.y = maxRise
 	velocity.y += gravity
 	move_and_slide()
+	#if move_and_slide(): # true if collided
+		#for i in get_slide_collision_count():
+			#var col = get_slide_collision(i)
+			#if col.get_collider() is RigidBody2D:
+				#col.get_collider().apply_force(col.get_normal() * -pushForce)
 	
