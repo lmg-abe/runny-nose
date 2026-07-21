@@ -4,9 +4,9 @@ extends CharacterBody2D
 @export var friction : float = 0.8
 @export var dashSpeed : int = 2000
 @export var gravity : int = 100
-@export var jumpSpeed : int = 2000
-@export var secondJumpSpeed : int = 2500
-@export var maxRise : int = -3000
+@export var jumpSpeed : int = 1500
+@export var secondJumpSpeed : int = 2000
+@export var maxRise : int = -2000
 var canSneeze : bool = false
 var canDash : bool = false
 
@@ -22,6 +22,8 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y=-jumpSpeed
 	if canSneeze and Input.is_action_just_pressed("sneeze") :
+		if velocity.y > 0 :
+			velocity.y = 0
 		velocity.y -= secondJumpSpeed
 		canSneeze = false
 	if velocity.y < maxRise :
