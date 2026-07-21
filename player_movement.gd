@@ -18,6 +18,8 @@ func _physics_process(delta: float) -> void:
 		canDash = true
 	if canDash and Input.is_action_just_pressed("dash") :
 		velocity.x+=Input.get_axis("move_left","move_right")*dashSpeed
+		if velocity.y > 0 :
+			velocity.y = 0
 		canDash = false
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y=-jumpSpeed
