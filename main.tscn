@@ -5,9 +5,14 @@
 [ext_resource type="Script" uid="uid://bwdlr4xoffopo" path="res://player_movement.gd" id="3_lquwl"]
 [ext_resource type="Script" uid="uid://5it2uxyvfgis" path="res://cameraFollow.gd" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://b32c5euv7m8ns" path="res://icon.svg" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://dl2ulel2qbav1" path="res://death_plane.gd" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://cpqs4s4ixphnm" path="res://death_counter.gd" id="7_272bh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frgu1"]
 size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+size = Vector2(200000, 1024)
 
 [node name="main" type="Node2D" unique_id=118560218]
 
@@ -45,3 +50,40 @@ texture = ExtResource("5_lquwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=722882572]
 shape = SubResource("RectangleShape2D_frgu1")
+
+[node name="DeathPlane" type="Area2D" parent="." unique_id=980809601]
+position = Vector2(122, 1749)
+script = ExtResource("6_7mycd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathPlane" unique_id=798388404]
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1844292688]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1303964357]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control" unique_id=1427293435]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="DeathCounter" type="Label" parent="CanvasLayer/Control/MarginContainer" unique_id=814732263]
+layout_mode = 2
+size_flags_vertical = 0
+text = "test"
+script = ExtResource("7_272bh")
+
+[connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]
