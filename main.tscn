@@ -96,7 +96,7 @@ zoom = Vector2(0.5, 0.5)
 script = ExtResource("4_1bvp3")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1073654291]
-position = Vector2(58, -762)
+position = Vector2(4230, -269)
 gravity_scale = 2.0
 
 [node name="Icon" type="Sprite2D" parent="RigidBody2D" unique_id=133866622]
