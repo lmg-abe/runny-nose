@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://kkyiuw4k8h5a"]
+
+[ext_resource type="Script" uid="uid://cc57y3lv6y08s" path="res://goop.gd" id="1_t7hpo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_efxa6"]
+radius = 28.0
+
+[node name="Goop" type="Area2D" unique_id=449165765]
+script = ExtResource("1_t7hpo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1876069290]
+shape = SubResource("CircleShape2D_efxa6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

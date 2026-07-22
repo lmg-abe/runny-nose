@@ -21,6 +21,17 @@ var fallAnim = load('res://runnyNoseFall.png')
 var walkAnim : int = 0
 var dashCooldown : int = 3
 var dashTimer : int = -1
+
+func _ready() -> void:
+	Global.update_goops.connect(_on_update_goops)
+	Global.update_bubbles.connect(_on_update_bubbles)
+
+func _on_update_goops() :
+	canSneeze = true
+
+func  _on_update_bubbles():
+	canDash = true
+
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_left"): facingDirection = -1
 	if Input.is_action_pressed("move_right"): facingDirection = 1

@@ -10,6 +10,8 @@
 [ext_resource type="Script" uid="uid://cpqs4s4ixphnm" path="res://death_counter.gd" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://bxreok8v3rk8d" path="res://collectable.tscn" id="9_kek77"]
 [ext_resource type="Script" uid="uid://bua7vcu78n8th" path="res://collectable_counter.gd" id="10_4c57u"]
+[ext_resource type="PackedScene" uid="uid://kkyiuw4k8h5a" path="res://goop.tscn" id="11_efxa6"]
+[ext_resource type="PackedScene" uid="uid://32q6niro3beh" path="res://bubble.tscn" id="12_dg77c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frgu1"]
 size = Vector2(128, 128)
@@ -46,8 +48,8 @@ position = Vector2(3661, -712)
 scale = Vector2(4, 1)
 
 [node name="Floor9" parent="." unique_id=49349976 instance=ExtResource("1_h2yge")]
-position = Vector2(6314, -716)
-scale = Vector2(4, 1)
+position = Vector2(6290, -890)
+scale = Vector2(4, 3)
 
 [node name="Door" type="StaticBody2D" parent="." unique_id=1293151393]
 position = Vector2(6339, -442)
@@ -106,7 +108,7 @@ position = Vector2(3658, -942)
 position = Vector2(4997, -967)
 
 [node name="Collectable8" parent="." unique_id=1923842681 instance=ExtResource("9_kek77")]
-position = Vector2(6321, -977)
+position = Vector2(6271, -1168)
 
 [node name="Collectable9" parent="." unique_id=1057300849 instance=ExtResource("9_kek77")]
 position = Vector2(6543, -386)
@@ -181,6 +183,12 @@ theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 20
 text = "test"
 script = ExtResource("10_4c57u")
+
+[node name="Goop" parent="." unique_id=449165765 instance=ExtResource("11_efxa6")]
+position = Vector2(5873, -901)
+
+[node name="Bubble" parent="." unique_id=1661249779 instance=ExtResource("12_dg77c")]
+position = Vector2(4804, -790)
 
 [connection signal="body_entered" from="Button" to="Button" method="_on_body_entered"]
 [connection signal="body_exited" from="Button" to="Button" method="_on_body_exited"]
