@@ -4,11 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://cb0enpjyg35ns" path="res://runny.tscn" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://blpj6ovlekaq6" path="res://openAndClose.gd" id="2_kek77"]
 [ext_resource type="Script" uid="uid://pa6468o3rv5a" path="res://button.gd" id="3_5vw27"]
-[ext_resource type="Script" uid="uid://bwdlr4xoffopo" path="res://player_movement.gd" id="3_lquwl"]
 [ext_resource type="Script" uid="uid://5it2uxyvfgis" path="res://cameraFollow.gd" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://b32c5euv7m8ns" path="res://icon.svg" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://dl2ulel2qbav1" path="res://death_plane.gd" id="6_7mycd"]
 [ext_resource type="Script" uid="uid://cpqs4s4ixphnm" path="res://death_counter.gd" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://bxreok8v3rk8d" path="res://collectable.tscn" id="9_kek77"]
+[ext_resource type="Script" uid="uid://bua7vcu78n8th" path="res://collectable_counter.gd" id="10_4c57u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frgu1"]
 size = Vector2(128, 128)
@@ -83,11 +84,32 @@ position = Vector2(321.99997, 283)
 rotation = 0.90782464
 scale = Vector2(9.345, 1)
 
-[node name="Runny" parent="." unique_id=1298635211 instance=ExtResource("2_1bvp3")]
-position = Vector2(902, 7)
-floor_max_angle = 1.4067354
-script = ExtResource("3_lquwl")
-pushForce = 1000
+[node name="Collectable" parent="." unique_id=268491179 instance=ExtResource("9_kek77")]
+position = Vector2(1208, -19)
+
+[node name="Collectable2" parent="." unique_id=657979170 instance=ExtResource("9_kek77")]
+position = Vector2(2292, -85)
+
+[node name="Collectable3" parent="." unique_id=437257054 instance=ExtResource("9_kek77")]
+position = Vector2(1909, -548)
+
+[node name="Collectable4" parent="." unique_id=884907187 instance=ExtResource("9_kek77")]
+position = Vector2(2748, -700)
+
+[node name="Collectable5" parent="." unique_id=1204115396 instance=ExtResource("9_kek77")]
+position = Vector2(2921, -695)
+
+[node name="Collectable6" parent="." unique_id=1044671538 instance=ExtResource("9_kek77")]
+position = Vector2(3658, -942)
+
+[node name="Collectable7" parent="." unique_id=254206996 instance=ExtResource("9_kek77")]
+position = Vector2(4997, -967)
+
+[node name="Collectable8" parent="." unique_id=1923842681 instance=ExtResource("9_kek77")]
+position = Vector2(6321, -977)
+
+[node name="Collectable9" parent="." unique_id=1057300849 instance=ExtResource("9_kek77")]
+position = Vector2(6543, -386)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=758760835]
 position = Vector2(684, 113)
@@ -112,6 +134,11 @@ script = ExtResource("6_7mycd")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathPlane" unique_id=798388404]
 shape = SubResource("RectangleShape2D_lquwl")
 
+[node name="Runny" parent="." unique_id=1298635211 instance=ExtResource("2_1bvp3")]
+position = Vector2(902, 7)
+floor_max_angle = 1.4067354
+pushForce = 1000
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1844292688]
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1303964357]
@@ -134,12 +161,36 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="DeathCounter" type="Label" parent="CanvasLayer/Control/MarginContainer" unique_id=814732263]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer" unique_id=1242794918]
+layout_mode = 2
+
+[node name="DeathCounter" type="Label" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=814732263]
 layout_mode = 2
 size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 20
 text = "test"
 script = ExtResource("7_272bh")
 
+[node name="CollectableCounter" type="Label" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=2137950302]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 20
+text = "test"
+script = ExtResource("10_4c57u")
+
 [connection signal="body_entered" from="Button" to="Button" method="_on_body_entered"]
 [connection signal="body_exited" from="Button" to="Button" method="_on_body_exited"]
+[connection signal="body_entered" from="Collectable" to="Collectable" method="_on_body_entered"]
+[connection signal="body_entered" from="Collectable2" to="Collectable2" method="_on_body_entered"]
+[connection signal="body_entered" from="Collectable3" to="Collectable3" method="_on_body_entered"]
+[connection signal="body_entered" from="Collectable4" to="Collectable4" method="_on_body_entered"]
+[connection signal="body_entered" from="Collectable5" to="Collectable5" method="_on_body_entered"]
+[connection signal="body_entered" from="Collectable6" to="Collectable6" method="_on_body_entered"]
+[connection signal="body_entered" from="Collectable7" to="Collectable7" method="_on_body_entered"]
+[connection signal="body_entered" from="Collectable8" to="Collectable8" method="_on_body_entered"]
+[connection signal="body_entered" from="Collectable9" to="Collectable9" method="_on_body_entered"]
 [connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]
