@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://32q6niro3beh"]
+
+[ext_resource type="Script" path="res://bubble.gd" id="1_n2mqj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_curir"]
+radius = 23.0
+
+[node name="Bubble" type="Area2D" unique_id=1661249779]
+script = ExtResource("1_n2mqj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1134641227]
+shape = SubResource("CircleShape2D_curir")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
