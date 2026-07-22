@@ -17,6 +17,7 @@ var facingDirection : int = 1
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_left"): facingDirection = -1
 	if Input.is_action_pressed("move_right"): facingDirection = 1
+	get_node("Icon").flip_h = (facingDirection<0)
 	velocity.x += Input.get_axis("move_left","move_right") * playerSpeed
 	velocity.x *= friction
 	if is_on_floor() :

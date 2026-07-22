@@ -1,15 +1,17 @@
 [gd_scene format=3 uid="uid://cb0enpjyg35ns"]
 
 [ext_resource type="Texture2D" uid="uid://btpfyj30kpy0v" path="res://runnyNoseStand.png" id="1_ahjt7"]
+[ext_resource type="Script" uid="uid://bwdlr4xoffopo" path="res://player_movement.gd" id="1_m4je5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ahjt7"]
 radius = 64.0
 height = 256.0
 
 [node name="Runny" type="CharacterBody2D" unique_id=1298635211]
+script = ExtResource("1_m4je5")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1860541011]
-position = Vector2(-5.0000005, -75)
+position = Vector2(-4.7683716e-07, -76)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_ahjt7")
 
