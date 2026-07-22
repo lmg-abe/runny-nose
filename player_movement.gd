@@ -13,11 +13,34 @@ var canDash : bool = false
 var jumpTimer : int = -1
 @export var pushForce = 1500
 var facingDirection : int = 1
+var standAnim = load('res://runnyNoseStand.png')
+var run1Anim = load('res://runnyNoseRun1.png')
+var run2Anim = load('res://runnyNoseRun2.png')
+var jumpAnim = load('res://runnyNoseJump.png')
+var fallAnim = load('res://runnyNoseFall.png')
+var walkAnim : int = 0
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_left"): facingDirection = -1
 	if Input.is_action_pressed("move_right"): facingDirection = 1
 	get_node("Icon").flip_h = (facingDirection<0)
+	if is_on_floor():
+		if Input.get_axis("move_left","move_right")!=0:
+			if walkAnim<=10:
+				get_node("Icon").texture = run2Anim
+			else:
+				get_node("Icon").texture = run1Anim
+			walkAnim+=1
+			walkAnim%=20
+		else:
+			get_node("Icon").texture = standAnim
+	else:
+		walkAnim=0
+		if velocity.y < 0:
+			get_node("Icon").texture = jumpAnim
+		else:
+			get_node("Icon").texture = fallAnim
+		
 	velocity.x += Input.get_axis("move_left","move_right") * playerSpeed
 	velocity.x *= friction
 	if is_on_floor() :
