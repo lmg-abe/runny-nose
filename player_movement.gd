@@ -19,6 +19,10 @@ var run2Anim = load('res://runnyNoseRun2.png')
 var jumpAnim = load('res://runnyNoseJump.png')
 var fallAnim = load('res://runnyNoseFall.png')
 var walkAnim : int = 0
+var thingyInHandArea : bool = false
+var holdingThing : bool = false
+var box
+var movementMultiplier : float = 1
 
 func _ready() -> void:
 	Global.update_goops.connect(_on_update_goops)
@@ -36,12 +40,12 @@ func _physics_process(delta: float) -> void:
 	get_node("Icon").flip_h = (facingDirection<0)
 	if is_on_floor():
 		if Input.get_axis("move_left","move_right")!=0:
-			if walkAnim<=10:
+			if walkAnim<=int(10.0/movementMultiplier):
 				get_node("Icon").texture = run2Anim
 			else:
 				get_node("Icon").texture = run1Anim
 			walkAnim+=1
-			walkAnim%=20
+			walkAnim%=int(20.0/movementMultiplier)
 		else:
 			get_node("Icon").texture = standAnim
 	else:
@@ -50,26 +54,52 @@ func _physics_process(delta: float) -> void:
 			get_node("Icon").texture = jumpAnim
 		else:
 			get_node("Icon").texture = fallAnim
-		
-	velocity.x += Input.get_axis("move_left","move_right") * playerSpeed
+	
+	# set down boxes
+	if holdingThing and Input.is_action_just_pressed("pick_up"):
+		box.position = Vector2(200*facingDirection,60)
+		box.freeze = false
+		holdingThing = false
+		box.reparent(get_parent())
+	
+	# move HandArea to the side the player is facing
+	get_node("HandArea").position = Vector2(150*facingDirection,60)
+	# pick up boxes
+	if Input.is_action_just_pressed("pick_up") and not holdingThing:
+		var stuffInHandArea = get_node("HandArea").get_overlapping_bodies()
+		for body in stuffInHandArea:
+			if body is RigidBody2D:
+				body.freeze = true
+				body.reparent(self)
+				body.position = Vector2(0,-200)
+				holdingThing = true
+				box = body
+				
+	
+	if holdingThing:
+		movementMultiplier=.5
+	else:
+		movementMultiplier=1
+	
+	velocity.x += Input.get_axis("move_left","move_right") * playerSpeed * movementMultiplier
 	velocity.x *= friction
 	if is_on_floor() :
 		canSneeze = true
 		canDash = true
-	if canDash and Input.is_action_just_pressed("dash") :
+	if canDash and Input.is_action_just_pressed("dash") and not holdingThing:
 		velocity.x+=Input.get_axis("move_left","move_right")*dashSpeed
 		if velocity.y > 0 :
 			velocity.y = 0
 		canDash = false
 	if !Input.is_action_pressed("jump") or is_on_floor() or jumpTimer > jumpRiseTime:
 		jumpTimer=-1
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor() and not holdingThing:
 		jumpTimer+=1
 	if jumpTimer>-1:
 		velocity.y=-jumpSpeed
 		jumpTimer+=1
 		
-	if canSneeze and Input.is_action_just_pressed("sneeze") :
+	if canSneeze and Input.is_action_just_pressed("sneeze") and not holdingThing:
 		if velocity.y > 0 :
 			velocity.y = 0
 		velocity.y -= secondJumpSpeed
