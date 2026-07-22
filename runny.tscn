@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cb0enpjyg35ns"]
 
-[ext_resource type="Texture2D" uid="uid://b32c5euv7m8ns" path="res://icon.svg" id="1_ahjt7"]
+[ext_resource type="Texture2D" uid="uid://btpfyj30kpy0v" path="res://runnyNoseStand.png" id="1_ahjt7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ahjt7"]
 radius = 64.0
@@ -9,7 +9,8 @@ height = 256.0
 [node name="Runny" type="CharacterBody2D" unique_id=1298635211]
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1860541011]
-scale = Vector2(1, 2)
+position = Vector2(-5.0000005, -75)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_ahjt7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1497603080]
