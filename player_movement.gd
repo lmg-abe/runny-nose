@@ -9,7 +9,7 @@ extends CharacterBody2D
 @export var maxRise : int = -2000
 @export var jumpRiseTime : int = 12
 var canSneeze : bool = false
-var canDash : bool = false
+var canDash : bool = true
 var jumpTimer : int = -1
 @export var pushForce = 1500
 var facingDirection : int = 1
@@ -19,7 +19,8 @@ var run2Anim = load('res://runnyNoseRun2.png')
 var jumpAnim = load('res://runnyNoseJump.png')
 var fallAnim = load('res://runnyNoseFall.png')
 var walkAnim : int = 0
-
+var dashCooldown : int = 3
+var dashTimer : int = -1
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_left"): facingDirection = -1
 	if Input.is_action_pressed("move_right"): facingDirection = 1
@@ -45,12 +46,13 @@ func _physics_process(delta: float) -> void:
 	velocity.x *= friction
 	if is_on_floor() :
 		canSneeze = true
-		canDash = true
 	if canDash and Input.is_action_just_pressed("dash") :
 		velocity.x+=Input.get_axis("move_left","move_right")*dashSpeed
 		if velocity.y > 0 :
 			velocity.y = 0
 		canDash = false
+		dashTimer =+ 1
+		#Add a Dash Cooldown. 
 	if !Input.is_action_pressed("jump") or is_on_floor() or jumpTimer > jumpRiseTime:
 		jumpTimer=-1
 	if Input.is_action_just_pressed("jump") and is_on_floor():
