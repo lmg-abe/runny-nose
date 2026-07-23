@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://2tqto0h1b7if" path="res://floor.tscn" id="6_keoi2"]
 [ext_resource type="PackedScene" uid="uid://bxreok8v3rk8d" path="res://collectable.tscn" id="7_nboye"]
 [ext_resource type="PackedScene" uid="uid://dx3ma57wvrfwy" path="res://basic_enemy.tscn" id="8_d5i42"]
+[ext_resource type="PackedScene" uid="uid://d13bdua4v0bbg" path="res://damage_hitbox.tscn" id="9_dfmo5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qacl"]
 size = Vector2(200000, 1024)
@@ -86,6 +87,10 @@ scale = Vector2(29.905, 1)
 position = Vector2(8599, 196)
 scale = Vector2(29.905, 1)
 
+[node name="StaticBody2D14" parent="." unique_id=1113391929 instance=ExtResource("6_keoi2")]
+position = Vector2(12311, 196)
+scale = Vector2(29.905, 1)
+
 [node name="StaticBody2D3" parent="." unique_id=177758370 instance=ExtResource("6_keoi2")]
 position = Vector2(2442, 129)
 scale = Vector2(4, 1)
@@ -97,6 +102,14 @@ scale = Vector2(6, 3)
 [node name="StaticBody2D5" parent="." unique_id=1971063427 instance=ExtResource("6_keoi2")]
 position = Vector2(4490, 1)
 scale = Vector2(6, 3)
+
+[node name="StaticBody2D17" parent="." unique_id=2097107526 instance=ExtResource("6_keoi2")]
+position = Vector2(13014, -20)
+scale = Vector2(8, 3)
+
+[node name="StaticBody2D18" parent="." unique_id=1879679695 instance=ExtResource("6_keoi2")]
+position = Vector2(13839.001, -289)
+scale = Vector2(5, 7)
 
 [node name="StaticBody2D11" parent="." unique_id=1048800606 instance=ExtResource("6_keoi2")]
 position = Vector2(7899, -199)
@@ -116,6 +129,14 @@ scale = Vector2(3, 1)
 
 [node name="StaticBody2D10" parent="." unique_id=335263317 instance=ExtResource("6_keoi2")]
 position = Vector2(6817, -449)
+scale = Vector2(3, 1)
+
+[node name="StaticBody2D15" parent="." unique_id=1240674805 instance=ExtResource("6_keoi2")]
+position = Vector2(10569, -572)
+scale = Vector2(3, 1)
+
+[node name="StaticBody2D16" parent="." unique_id=276914108 instance=ExtResource("6_keoi2")]
+position = Vector2(11663, -315)
 scale = Vector2(3, 1)
 
 [node name="StaticBody2D6" parent="." unique_id=485226680 instance=ExtResource("6_keoi2")]
@@ -158,5 +179,9 @@ position = Vector2(9057, -1038)
 
 [node name="BasicEnemy" parent="." unique_id=641976464 instance=ExtResource("8_d5i42")]
 position = Vector2(8728, -664)
+
+[node name="DamageHitbox" parent="." unique_id=1883985547 instance=ExtResource("9_dfmo5")]
+position = Vector2(12837.999, 92)
+scale = Vector2(50, 1)
 
 [connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]
