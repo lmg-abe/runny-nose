@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://6ajus81miifj"]
+
+[ext_resource type="Script" uid="uid://5it2uxyvfgis" path="res://cameraFollow.gd" id="1_1rxqu"]
+[ext_resource type="Script" uid="uid://dl2ulel2qbav1" path="res://death_plane.gd" id="2_keoi2"]
+[ext_resource type="PackedScene" uid="uid://cb0enpjyg35ns" path="res://runny.tscn" id="3_nboye"]
+[ext_resource type="Script" uid="uid://cpqs4s4ixphnm" path="res://death_counter.gd" id="4_d5i42"]
+[ext_resource type="Script" uid="uid://bua7vcu78n8th" path="res://collectable_counter.gd" id="5_dfmo5"]
+[ext_resource type="PackedScene" uid="uid://2tqto0h1b7if" path="res://floor.tscn" id="6_keoi2"]
+[ext_resource type="PackedScene" uid="uid://bxreok8v3rk8d" path="res://collectable.tscn" id="7_nboye"]
+[ext_resource type="PackedScene" uid="uid://dx3ma57wvrfwy" path="res://basic_enemy.tscn" id="8_d5i42"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7qacl"]
+size = Vector2(200000, 1024)
+
+[node name="Area 1" type="Node2D" unique_id=1738656535]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=473729213]
+position = Vector2(684, 113)
+zoom = Vector2(0.4, 0.4)
+script = ExtResource("1_1rxqu")
+
+[node name="DeathPlane" type="Area2D" parent="." unique_id=883156438]
+position = Vector2(122, 1749)
+script = ExtResource("2_keoi2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathPlane" unique_id=29772880]
+shape = SubResource("RectangleShape2D_7qacl")
+
+[node name="Runny" parent="." unique_id=1298635211 instance=ExtResource("3_nboye")]
+position = Vector2(268, 1)
+floor_max_angle = 1.4067354
+pushForce = 1000
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=538453313]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1771040362]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control" unique_id=1361003556]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer" unique_id=16996318]
+layout_mode = 2
+
+[node name="DeathCounter" type="Label" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=134890686]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 20
+text = "test"
+script = ExtResource("4_d5i42")
+
+[node name="CollectableCounter" type="Label" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=1119425309]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 20
+text = "test"
+script = ExtResource("5_dfmo5")
+
+[node name="StaticBody2D" parent="." unique_id=838538383 instance=ExtResource("6_keoi2")]
+position = Vector2(1270, 260)
+scale = Vector2(29.905, 1)
+
+[node name="StaticBody2D7" parent="." unique_id=1419789016 instance=ExtResource("6_keoi2")]
+position = Vector2(5040, 196)
+scale = Vector2(29.905, 1)
+
+[node name="StaticBody2D8" parent="." unique_id=1138478978 instance=ExtResource("6_keoi2")]
+position = Vector2(8599, 196)
+scale = Vector2(29.905, 1)
+
+[node name="StaticBody2D3" parent="." unique_id=177758370 instance=ExtResource("6_keoi2")]
+position = Vector2(2442, 129)
+scale = Vector2(4, 1)
+
+[node name="StaticBody2D4" parent="." unique_id=1383861184 instance=ExtResource("6_keoi2")]
+position = Vector2(3082, 0.99999243)
+scale = Vector2(6, 3)
+
+[node name="StaticBody2D5" parent="." unique_id=1971063427 instance=ExtResource("6_keoi2")]
+position = Vector2(4490, 1)
+scale = Vector2(6, 3)
+
+[node name="StaticBody2D11" parent="." unique_id=1048800606 instance=ExtResource("6_keoi2")]
+position = Vector2(7899, -199)
+scale = Vector2(4, 8)
+
+[node name="StaticBody2D13" parent="." unique_id=491889089 instance=ExtResource("6_keoi2")]
+position = Vector2(9563, -199)
+scale = Vector2(4, 8)
+
+[node name="StaticBody2D12" parent="." unique_id=1315377209 instance=ExtResource("6_keoi2")]
+position = Vector2(8731, -135)
+scale = Vector2(9, 7)
+
+[node name="StaticBody2D9" parent="." unique_id=972263882 instance=ExtResource("6_keoi2")]
+position = Vector2(5725, -343)
+scale = Vector2(3, 1)
+
+[node name="StaticBody2D10" parent="." unique_id=335263317 instance=ExtResource("6_keoi2")]
+position = Vector2(6817, -449)
+scale = Vector2(3, 1)
+
+[node name="StaticBody2D6" parent="." unique_id=485226680 instance=ExtResource("6_keoi2")]
+position = Vector2(3786, 65)
+scale = Vector2(5, 2)
+
+[node name="StaticBody2D2" parent="." unique_id=1952344496 instance=ExtResource("6_keoi2")]
+position = Vector2(-193, -255)
+scale = Vector2(1, 11.905)
+
+[node name="Collectable" parent="." unique_id=268491179 instance=ExtResource("7_nboye")]
+position = Vector2(3555, -569)
+
+[node name="Collectable2" parent="." unique_id=1991439141 instance=ExtResource("7_nboye")]
+position = Vector2(3807, -615)
+
+[node name="Collectable3" parent="." unique_id=1816887654 instance=ExtResource("7_nboye")]
+position = Vector2(4043, -573)
+
+[node name="Collectable4" parent="." unique_id=1230869200 instance=ExtResource("7_nboye")]
+position = Vector2(5186, -673)
+
+[node name="Collectable5" parent="." unique_id=222490192 instance=ExtResource("7_nboye")]
+position = Vector2(5718, -531)
+
+[node name="Collectable6" parent="." unique_id=1621041062 instance=ExtResource("7_nboye")]
+position = Vector2(6260, -849)
+
+[node name="Collectable7" parent="." unique_id=138646877 instance=ExtResource("7_nboye")]
+position = Vector2(6816, -618)
+
+[node name="Collectable8" parent="." unique_id=1675455245 instance=ExtResource("7_nboye")]
+position = Vector2(7348, -925)
+
+[node name="Collectable9" parent="." unique_id=108265458 instance=ExtResource("7_nboye")]
+position = Vector2(8416, -1020)
+
+[node name="Collectable10" parent="." unique_id=524775536 instance=ExtResource("7_nboye")]
+position = Vector2(9057, -1038)
+
+[node name="BasicEnemy" parent="." unique_id=641976464 instance=ExtResource("8_d5i42")]
+position = Vector2(8728, -664)
+
+[connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]
