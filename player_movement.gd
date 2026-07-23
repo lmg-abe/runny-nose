@@ -11,6 +11,7 @@ extends CharacterBody2D
 var canSneeze : bool = false
 var canDash : bool = false
 var jumpTimer : int = -1
+var dashTimer : int = -1
 @export var pushForce = 1500
 var facingDirection : int = 1
 var standAnim = load('res://runnyNoseStand.png')
@@ -81,13 +82,19 @@ func _physics_process(delta: float) -> void:
 	else:
 		movementMultiplier=1
 	
+	if dashTimer>-1:
+		if velocity.y > 0 :
+			velocity.y = 0
+		dashTimer-=1
+	
 	velocity.x += Input.get_axis("move_left","move_right") * playerSpeed * movementMultiplier
 	velocity.x *= friction
 	if is_on_floor() :
 		canSneeze = true
 		canDash = true
-	if canDash and Input.is_action_just_pressed("dash") and not holdingThing:
+	if canDash and Input.is_action_just_pressed("dash") and not holdingThing and dashTimer==-1:
 		velocity.x+=Input.get_axis("move_left","move_right")*dashSpeed
+		dashTimer=10
 		if velocity.y > 0 :
 			velocity.y = 0
 		canDash = false
