@@ -91,6 +91,14 @@ scale = Vector2(29.905, 1)
 position = Vector2(12311, 196)
 scale = Vector2(29.905, 1)
 
+[node name="StaticBody2D19" parent="." unique_id=12605855 instance=ExtResource("6_keoi2")]
+position = Vector2(16136.999, 193)
+scale = Vector2(29.905, 1)
+
+[node name="StaticBody2D20" parent="." unique_id=188355366 instance=ExtResource("6_keoi2")]
+position = Vector2(15886, -658)
+scale = Vector2(5, 1)
+
 [node name="StaticBody2D3" parent="." unique_id=177758370 instance=ExtResource("6_keoi2")]
 position = Vector2(2442, 129)
 scale = Vector2(4, 1)
@@ -110,6 +118,10 @@ scale = Vector2(8, 3)
 [node name="StaticBody2D18" parent="." unique_id=1879679695 instance=ExtResource("6_keoi2")]
 position = Vector2(13839.001, -289)
 scale = Vector2(5, 7)
+
+[node name="StaticBody2D21" parent="." unique_id=704945455 instance=ExtResource("6_keoi2")]
+position = Vector2(18783, -336)
+scale = Vector2(20, 7)
 
 [node name="StaticBody2D11" parent="." unique_id=1048800606 instance=ExtResource("6_keoi2")]
 position = Vector2(7899, -199)
@@ -177,11 +189,44 @@ position = Vector2(8416, -1020)
 [node name="Collectable10" parent="." unique_id=524775536 instance=ExtResource("7_nboye")]
 position = Vector2(9057, -1038)
 
+[node name="Collectable11" parent="." unique_id=1310744171 instance=ExtResource("7_nboye")]
+position = Vector2(10132, -1029)
+
+[node name="Collectable12" parent="." unique_id=1753135212 instance=ExtResource("7_nboye")]
+position = Vector2(11180, -841)
+
+[node name="Collectable13" parent="." unique_id=2096534433 instance=ExtResource("7_nboye")]
+position = Vector2(12210, -617)
+
+[node name="Collectable14" parent="." unique_id=1288698361 instance=ExtResource("7_nboye")]
+position = Vector2(13347, -868)
+
+[node name="Collectable15" parent="." unique_id=36699264 instance=ExtResource("7_nboye")]
+position = Vector2(13669, -877)
+
+[node name="Collectable16" parent="." unique_id=637523986 instance=ExtResource("7_nboye")]
+position = Vector2(14538, -904)
+
+[node name="Collectable17" parent="." unique_id=663362583 instance=ExtResource("7_nboye")]
+position = Vector2(14923, -689)
+
+[node name="Collectable18" parent="." unique_id=892506077 instance=ExtResource("7_nboye")]
+position = Vector2(15326, -886)
+
+[node name="Collectable19" parent="." unique_id=2132031882 instance=ExtResource("7_nboye")]
+position = Vector2(16454, -868)
+
+[node name="Collectable20" parent="." unique_id=1438474288 instance=ExtResource("7_nboye")]
+position = Vector2(16839, -653)
+
+[node name="Collectable21" parent="." unique_id=1614682485 instance=ExtResource("7_nboye")]
+position = Vector2(17242, -850)
+
 [node name="BasicEnemy" parent="." unique_id=641976464 instance=ExtResource("8_d5i42")]
 position = Vector2(8728, -664)
 
 [node name="DamageHitbox" parent="." unique_id=1883985547 instance=ExtResource("9_dfmo5")]
-position = Vector2(12837.999, 92)
-scale = Vector2(50, 1)
+position = Vector2(13920, 74)
+scale = Vector2(70, 1.4)
 
 [connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]
