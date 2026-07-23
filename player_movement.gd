@@ -57,7 +57,7 @@ func _physics_process(delta: float) -> void:
 	
 	# set down boxes
 	if holdingThing and Input.is_action_just_pressed("pick_up"):
-		box.position = Vector2(200*facingDirection,60)
+		box.position = Vector2(200*facingDirection,28)
 		box.freeze = false
 		holdingThing = false
 		box.reparent(get_parent())

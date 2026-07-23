@@ -14,8 +14,12 @@ extends Area2D
 func _process(delta: float) -> void:
 	var stuffOnButton = self.get_overlapping_bodies()
 	var node = get_parent().get_node(doorObj)
+	var foundValidButtonPresser = false
+	get_node("Icon").position = Vector2(0,0)
 	for body in stuffOnButton:
 		if body is RigidBody2D or body is CharacterBody2D:
 			node.open()
-	if len(stuffOnButton)==0:
+			get_node("Icon").position = Vector2(0,32)
+			foundValidButtonPresser = true
+	if not foundValidButtonPresser:
 		node.close()
