@@ -1,12 +1,18 @@
 [gd_scene format=3 uid="uid://32q6niro3beh"]
 
 [ext_resource type="Script" uid="uid://cvkfumfmxx8s3" path="res://bubble.gd" id="1_n2mqj"]
+[ext_resource type="Texture2D" uid="uid://b32c5euv7m8ns" path="res://icon.svg" id="2_y2db8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_curir"]
 radius = 23.0
 
 [node name="Bubble" type="Area2D" unique_id=1661249779]
 script = ExtResource("1_n2mqj")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=2043066719]
+modulate = Color(0, 0, 1, 1)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_y2db8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1134641227]
 shape = SubResource("CircleShape2D_curir")
