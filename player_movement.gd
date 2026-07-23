@@ -24,6 +24,7 @@ var thingyInHandArea : bool = false
 var holdingThing : bool = false
 var box
 var movementMultiplier : float = 1
+var idleAnimTimer : int = 0
 
 func _ready() -> void:
 	Global.update_goops.connect(_on_update_goops)
@@ -38,23 +39,32 @@ func  _on_update_bubbles():
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_left"): facingDirection = -1
 	if Input.is_action_pressed("move_right"): facingDirection = 1
-	get_node("Icon").flip_h = (facingDirection<0)
+	var icon = get_node("Visible").get_node("Icon")
+	icon.flip_h = (facingDirection<0)
 	if is_on_floor():
 		if Input.get_axis("move_left","move_right")!=0:
 			if walkAnim<=int(10.0/movementMultiplier):
-				get_node("Icon").texture = run2Anim
+				icon.texture = run2Anim
 			else:
-				get_node("Icon").texture = run1Anim
+				icon.texture = run1Anim
 			walkAnim+=1
 			walkAnim%=int(20.0/movementMultiplier)
 		else:
-			get_node("Icon").texture = standAnim
+			icon.texture = standAnim
 	else:
 		walkAnim=0
 		if velocity.y < 0:
-			get_node("Icon").texture = jumpAnim
+			icon.texture = jumpAnim
 		else:
-			get_node("Icon").texture = fallAnim
+			icon.texture = fallAnim
+	
+	if Input.get_axis("move_left","move_right") ==0 and is_on_floor():
+		idleAnimTimer+=1
+		get_node("Visible").scale.y = 1-(sin(deg_to_rad(idleAnimTimer*2))/20.0)
+	else:
+		get_node("Visible").scale.y = 1
+	
+	get_node("Visible").scale.x = 1/get_node("Visible").scale.y
 	
 	# set down boxes
 	if holdingThing and Input.is_action_just_pressed("pick_up"):

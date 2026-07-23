@@ -14,8 +14,11 @@ size = Vector2(120, 120)
 [node name="Runny" type="CharacterBody2D" unique_id=1298635211]
 script = ExtResource("1_m4je5")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1860541011]
-position = Vector2(-4.7683716e-07, -76)
+[node name="Visible" type="Node2D" parent="." unique_id=1238190543]
+position = Vector2(0, 128)
+
+[node name="Icon" type="Sprite2D" parent="Visible" unique_id=1860541011]
+position = Vector2(-4.7683716e-07, -204)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_ahjt7")
 

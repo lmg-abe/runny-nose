@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://6ajus81miifj"]
 
 [ext_resource type="Script" uid="uid://5it2uxyvfgis" path="res://cameraFollow.gd" id="1_1rxqu"]
+[ext_resource type="Texture2D" uid="uid://b54wo2levf2yf" path="res://paper.jpg" id="2_dfmo5"]
 [ext_resource type="Script" uid="uid://dl2ulel2qbav1" path="res://death_plane.gd" id="2_keoi2"]
+[ext_resource type="Script" uid="uid://benmid644r70d" path="res://do paralax.gd" id="3_7qacl"]
 [ext_resource type="PackedScene" uid="uid://cb0enpjyg35ns" path="res://runny.tscn" id="3_nboye"]
 [ext_resource type="Script" uid="uid://cpqs4s4ixphnm" path="res://death_counter.gd" id="4_d5i42"]
 [ext_resource type="Script" uid="uid://bua7vcu78n8th" path="res://collectable_counter.gd" id="5_dfmo5"]
 [ext_resource type="PackedScene" uid="uid://2tqto0h1b7if" path="res://floor.tscn" id="6_keoi2"]
 [ext_resource type="PackedScene" uid="uid://bxreok8v3rk8d" path="res://collectable.tscn" id="7_nboye"]
 [ext_resource type="PackedScene" uid="uid://dx3ma57wvrfwy" path="res://basic_enemy.tscn" id="8_d5i42"]
+[ext_resource type="Texture2D" uid="uid://bxurp8851yn4l" path="res://grass.png" id="11_gjxye"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qacl"]
 size = Vector2(200000, 1024)
@@ -19,17 +22,22 @@ position = Vector2(684, 113)
 zoom = Vector2(0.4, 0.4)
 script = ExtResource("1_1rxqu")
 
+[node name="Paper" type="Sprite2D" parent="Camera2D" unique_id=692617652]
+modulate = Color(0.12479999, 0.48, 0.12479999, 1)
+texture_repeat = 3
+rotation = 1.5707964
+scale = Vector2(2, 2)
+texture = ExtResource("2_dfmo5")
+region_enabled = true
+region_rect = Rect2(0, 853, 1280, 17070)
+script = ExtResource("3_7qacl")
+
 [node name="DeathPlane" type="Area2D" parent="." unique_id=883156438]
 position = Vector2(122, 1749)
 script = ExtResource("2_keoi2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathPlane" unique_id=29772880]
 shape = SubResource("RectangleShape2D_7qacl")
-
-[node name="Runny" parent="." unique_id=1298635211 instance=ExtResource("3_nboye")]
-position = Vector2(268, 1)
-floor_max_angle = 1.4067354
-pushForce = 1000
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=538453313]
 
@@ -125,6 +133,109 @@ scale = Vector2(5, 2)
 [node name="StaticBody2D2" parent="." unique_id=1952344496 instance=ExtResource("6_keoi2")]
 position = Vector2(-193, -255)
 scale = Vector2(1, 11.905)
+
+[node name="NinePatchRect6" type="NinePatchRect" parent="." unique_id=2097562094]
+offset_left = 3513.0
+offset_top = 83.0
+offset_right = 12118.0
+offset_bottom = 1354.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect7" type="NinePatchRect" parent="." unique_id=1614676304]
+offset_left = 5513.0
+offset_top = -454.0
+offset_right = 5946.0
+offset_bottom = -232.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="." unique_id=1139790082]
+offset_left = 2167.0
+offset_top = 22.0
+offset_right = 2743.0
+offset_bottom = 1293.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="." unique_id=470678578]
+offset_left = 3435.0
+offset_top = -108.0
+offset_right = 4125.0
+offset_bottom = 1163.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="." unique_id=2058014100]
+offset_left = 2676.0
+offset_top = -240.0
+offset_right = 3492.0
+offset_bottom = 1031.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect5" type="NinePatchRect" parent="." unique_id=470893135]
+offset_left = 4077.0
+offset_top = -237.0
+offset_right = 4893.0
+offset_bottom = 1034.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1791251047]
+offset_left = -151.0
+offset_top = 148.0
+offset_right = 2237.0
+offset_bottom = 1419.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Runny" parent="." unique_id=1298635211 instance=ExtResource("3_nboye")]
+position = Vector2(268, 1)
+floor_max_angle = 1.4067354
+pushForce = 1000
 
 [node name="Collectable" parent="." unique_id=268491179 instance=ExtResource("7_nboye")]
 position = Vector2(3555, -569)
