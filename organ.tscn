@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c4peia8fxfq0x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tcasc"]
+radius = 23.0
+
+[node name="Organ" type="Area2D" unique_id=339871633]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1579779555]
+shape = SubResource("CircleShape2D_tcasc")
+
+[connection signal="body_entered" from="." to="CollisionShape2D" method="_on_organ_body_entered"]

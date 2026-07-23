@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://7gfc2a6a4yx"]
+
+[ext_resource type="Script" path="res://hand_npc.gd" id="1_iltyl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qen3a"]
+radius = 64.0
+height = 256.0
+
+[node name="HandNPC" type="Area2D" unique_id=434802834]
+script = ExtResource("1_iltyl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=229022879]
+shape = SubResource("CapsuleShape2D_qen3a")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
