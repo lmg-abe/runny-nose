@@ -8,10 +8,6 @@ signal died
 var got_hand : bool = false
 var got_ear : bool = false
 
-
-var got_hand : bool = false
-var got_ear : bool = false
-
 signal update_collectables
 
 var goops : int = 0
