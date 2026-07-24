@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://c3fwog6blolrm" path="res://return_to_title.gd" id="1_nm7lk"]
 [ext_resource type="Script" uid="uid://dbovnjhscgux" path="res://scoreCalculator.gd" id="2_c1t8d"]
+[ext_resource type="Texture2D" uid="uid://c8rrqcdnklpx0" path="res://handyman.png" id="3_j6beo"]
+[ext_resource type="Texture2D" uid="uid://jc4ol6qaamst" path="res://john ear.png" id="4_4av4j"]
+[ext_resource type="Texture2D" uid="uid://btpfyj30kpy0v" path="res://runnyNoseStand.png" id="5_5em78"]
 
 [node name="Credits" type="Control" unique_id=1457157402]
 layout_mode = 3
@@ -58,5 +61,23 @@ text = "
 Your Score: placeholder"
 horizontal_alignment = 1
 script = ExtResource("2_c1t8d")
+
+[node name="Handyman" type="Sprite2D" parent="." unique_id=836792449]
+position = Vector2(165, 385)
+rotation = -0.2742872
+scale = Vector2(0.29865992, 0.29865992)
+texture = ExtResource("3_j6beo")
+
+[node name="JohnEar" type="Sprite2D" parent="." unique_id=955700974]
+position = Vector2(967, 230)
+rotation = 0.2345675
+scale = Vector2(0.30806655, 0.30806655)
+texture = ExtResource("4_4av4j")
+
+[node name="RunnyNoseStand" type="Sprite2D" parent="." unique_id=1796974662]
+position = Vector2(189, 80)
+rotation = 0.1561005
+scale = Vector2(0.5676814, 0.5346936)
+texture = ExtResource("5_5em78")
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Button" to="MarginContainer/CenterContainer/VBoxContainer/Button" method="_on_pressed"]
