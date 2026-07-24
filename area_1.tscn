@@ -18,7 +18,7 @@ size = Vector2(200000, 1024)
 [node name="Area 1" type="Node2D" unique_id=1738656535]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=473729213]
-position = Vector2(684, 113)
+position = Vector2(1369, -426)
 zoom = Vector2(0.4, 0.4)
 script = ExtResource("1_1rxqu")
 
@@ -28,7 +28,7 @@ texture_repeat = 3
 scale = Vector2(2, 2)
 texture = ExtResource("2_dfmo5")
 region_enabled = true
-region_rect = Rect2(853, 0, 34140, 1280)
+region_rect = Rect2(853, 0, 34140, 3840)
 script = ExtResource("3_7qacl")
 
 [node name="DeathPlane" type="Area2D" parent="." unique_id=883156438]

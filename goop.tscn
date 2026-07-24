@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://kkyiuw4k8h5a"]
 
 [ext_resource type="Script" uid="uid://cc57y3lv6y08s" path="res://goop.gd" id="1_t7hpo"]
-[ext_resource type="Texture2D" uid="uid://b32c5euv7m8ns" path="res://icon.svg" id="2_vj6bd"]
+[ext_resource type="Texture2D" uid="uid://d2t1g3th8b7xp" path="res://goop.png" id="2_vj6bd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_efxa6"]
 radius = 28.0
@@ -9,9 +9,8 @@ radius = 28.0
 [node name="Goop" type="Area2D" unique_id=449165765]
 script = ExtResource("1_t7hpo")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1799172473]
-modulate = Color(0, 1, 0, 1)
-scale = Vector2(0.4, 0.4)
+[node name="Icon" type="Sprite2D" parent="." unique_id=186883010]
+scale = Vector2(0.575, 0.575)
 texture = ExtResource("2_vj6bd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1876069290]
