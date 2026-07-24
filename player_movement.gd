@@ -27,6 +27,7 @@ var movementMultiplier : float = 1
 var idleAnimTimer : int = 0
 var wasAirborne : bool = false
 @export var booger : PackedScene
+@export var dust : PackedScene
 
 func _ready() -> void:
 	Global.update_goops.connect(_on_update_goops)
@@ -143,11 +144,19 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor() and not holdingThing:
 		jumpTimer+=1
 		get_node("jump").play()
+		var newDust = dust.instantiate()
+		add_child(newDust)
+		newDust.position = Vector2(0,128)
+		newDust.reparent(get_parent())
 	if jumpTimer>-1:
 		velocity.y=-jumpSpeed
 		jumpTimer+=1
 	if wasAirborne and is_on_floor():
 		get_node("landing").play()
+		var newDust = dust.instantiate()
+		add_child(newDust)
+		newDust.position = Vector2(0,128)
+		newDust.reparent(get_parent())
 		
 	if canSneeze and Input.is_action_just_pressed("sneeze") and not holdingThing:
 		if velocity.y > 0 :

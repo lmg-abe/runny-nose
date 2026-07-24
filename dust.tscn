@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dyu8cln250i"]
+
+[ext_resource type="Texture2D" uid="uid://nvfluvqjywey" path="res://dust.png" id="1_1vtmn"]
+[ext_resource type="Script" uid="uid://ch510ffy685jn" path="res://dust.gd" id="2_hvgcl"]
+
+[node name="Dust" type="Sprite2D" unique_id=1579062710]
+modulate = Color(1, 1, 1, 0.4862745)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_1vtmn")
+script = ExtResource("2_hvgcl")

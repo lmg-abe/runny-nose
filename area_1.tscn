@@ -10,8 +10,11 @@
 [ext_resource type="Script" uid="uid://bua7vcu78n8th" path="res://collectable_counter.gd" id="5_dfmo5"]
 [ext_resource type="Texture2D" uid="uid://brq1yymk30p2p" path="res://bg_stump.png" id="5_r2afo"]
 [ext_resource type="PackedScene" uid="uid://2tqto0h1b7if" path="res://floor.tscn" id="6_keoi2"]
+[ext_resource type="Texture2D" uid="uid://b4q26pf82t6yf" path="res://bg_fallen_log.png" id="6_q5abr"]
 [ext_resource type="PackedScene" uid="uid://bxreok8v3rk8d" path="res://collectable.tscn" id="7_nboye"]
+[ext_resource type="Texture2D" uid="uid://dqj4ji5fr6llu" path="res://bg_bush.png" id="7_rulab"]
 [ext_resource type="PackedScene" uid="uid://dx3ma57wvrfwy" path="res://basic_enemy.tscn" id="8_d5i42"]
+[ext_resource type="Texture2D" uid="uid://brljtl8dtb34e" path="res://bg_mushroom.png" id="8_r73l4"]
 [ext_resource type="Texture2D" uid="uid://bxurp8851yn4l" path="res://grass.png" id="11_gjxye"]
 [ext_resource type="AudioStream" uid="uid://coq2o4d87r31g" path="res://area_1_music.wav" id="12_hur56"]
 [ext_resource type="Script" uid="uid://ckgwqyfdgxcm2" path="res://checkpoint.gd" id="15_th8es"]
@@ -45,6 +48,50 @@ texture = ExtResource("4_lx7ru")
 [node name="BgStump" type="Sprite2D" parent="BgTree" unique_id=1362299212]
 position = Vector2(649, 184)
 texture = ExtResource("5_r2afo")
+
+[node name="BgTree2" type="Sprite2D" parent="BgTree" unique_id=288036235]
+position = Vector2(1686, -397)
+texture = ExtResource("4_lx7ru")
+
+[node name="BgFallenLog" type="Sprite2D" parent="BgTree" unique_id=1746722684]
+position = Vector2(1251, 51)
+texture = ExtResource("6_q5abr")
+
+[node name="BgBush" type="Sprite2D" parent="BgTree" unique_id=346025221]
+position = Vector2(2595, -129)
+texture = ExtResource("7_rulab")
+
+[node name="BgMushroom" type="Sprite2D" parent="BgTree" unique_id=360225380]
+position = Vector2(2997, -195)
+texture = ExtResource("8_r73l4")
+
+[node name="BgMushroom2" type="Sprite2D" parent="BgTree" unique_id=329893803]
+position = Vector2(1210, -19)
+texture = ExtResource("8_r73l4")
+
+[node name="BgTree" type="Sprite2D" parent="BgTree" unique_id=2003571099]
+position = Vector2(5127, -76)
+texture = ExtResource("4_lx7ru")
+
+[node name="BgStump2" type="Sprite2D" parent="BgTree" unique_id=995712868]
+position = Vector2(4065, 125)
+texture = ExtResource("5_r2afo")
+
+[node name="BgMushroom3" type="Sprite2D" parent="BgTree" unique_id=1782582880]
+position = Vector2(5499, -511)
+texture = ExtResource("8_r73l4")
+
+[node name="BgFallenLog2" type="Sprite2D" parent="BgTree" unique_id=948698513]
+position = Vector2(5319, 111)
+texture = ExtResource("6_q5abr")
+
+[node name="BgTree3" type="Sprite2D" parent="BgTree" unique_id=1488280561]
+position = Vector2(6872, -916)
+texture = ExtResource("4_lx7ru")
+
+[node name="BgFallenLog3" type="Sprite2D" parent="BgTree" unique_id=907203671]
+position = Vector2(7909, -601)
+texture = ExtResource("6_q5abr")
 
 [node name="DeathPlane" type="Area2D" parent="." unique_id=883156438]
 position = Vector2(122, 1749)
