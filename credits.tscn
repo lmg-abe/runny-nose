@@ -62,6 +62,14 @@ Your Score: placeholder"
 horizontal_alignment = 1
 script = ExtResource("2_c1t8d")
 
+[node name="Label5" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=510377625]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "
+(press ESC to quit)"
+horizontal_alignment = 1
+script = ExtResource("2_c1t8d")
+
 [node name="Handyman" type="Sprite2D" parent="." unique_id=836792449]
 position = Vector2(165, 385)
 rotation = -0.2742872
