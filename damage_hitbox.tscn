@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dl2ulel2qbav1" path="res://death_plane.gd" id="1_84o21"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_frgu1"]
-radius = 70.0
+radius = 80.0
 
 [node name="DamageHitbox" type="Area2D" unique_id=1883985547]
 collision_layer = 2
