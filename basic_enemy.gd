@@ -16,3 +16,6 @@ func _physics_process(delta: float) -> void:
 	get_node("Icon").flip_h = (facingDirection==1)
 	get_node("Icon").rotation = sin((deg_to_rad(animTimer*6)))/4
 	move_and_slide()
+
+func die():
+	queue_free()	

@@ -26,12 +26,15 @@ var box
 var movementMultiplier : float = 1
 var idleAnimTimer : int = 0
 var wasAirborne : bool = false
+@export var booger : PackedScene
 
 func _ready() -> void:
 	Global.update_goops.connect(_on_update_goops)
 	Global.update_bubbles.connect(_on_update_bubbles)
 	if Global.deaths>0:
 		get_node("death").play()
+		Global.collectables=0
+		Global.update_collectables.emit()
 
 func _on_update_goops() :
 	canSneeze = true
@@ -129,6 +132,10 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= secondJumpSpeed
 		canSneeze = false
 		get_node("sneeze").play()
+		var createdBooger = booger.instantiate()
+		add_child(createdBooger)
+		createdBooger.position = Vector2(0,0)
+		createdBooger.reparent(get_parent())
 	if velocity.y < maxRise :
 		velocity.y = maxRise
 	velocity.y += gravity

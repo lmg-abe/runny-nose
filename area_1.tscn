@@ -6,7 +6,9 @@
 [ext_resource type="Script" uid="uid://benmid644r70d" path="res://do paralax.gd" id="3_7qacl"]
 [ext_resource type="PackedScene" uid="uid://cb0enpjyg35ns" path="res://runny.tscn" id="3_nboye"]
 [ext_resource type="Script" uid="uid://cpqs4s4ixphnm" path="res://death_counter.gd" id="4_d5i42"]
+[ext_resource type="Texture2D" uid="uid://boxa6375d5fnq" path="res://bg_tree.png" id="4_lx7ru"]
 [ext_resource type="Script" uid="uid://bua7vcu78n8th" path="res://collectable_counter.gd" id="5_dfmo5"]
+[ext_resource type="Texture2D" uid="uid://brq1yymk30p2p" path="res://bg_stump.png" id="5_r2afo"]
 [ext_resource type="PackedScene" uid="uid://2tqto0h1b7if" path="res://floor.tscn" id="6_keoi2"]
 [ext_resource type="PackedScene" uid="uid://bxreok8v3rk8d" path="res://collectable.tscn" id="7_nboye"]
 [ext_resource type="PackedScene" uid="uid://dx3ma57wvrfwy" path="res://basic_enemy.tscn" id="8_d5i42"]
@@ -31,6 +33,14 @@ texture = ExtResource("2_dfmo5")
 region_enabled = true
 region_rect = Rect2(853, 0, 34140, 3840)
 script = ExtResource("3_7qacl")
+
+[node name="BgTree" type="Sprite2D" parent="." unique_id=268352074]
+position = Vector2(1182, -46)
+texture = ExtResource("4_lx7ru")
+
+[node name="BgStump" type="Sprite2D" parent="BgTree" unique_id=1362299212]
+position = Vector2(649, 184)
+texture = ExtResource("5_r2afo")
 
 [node name="DeathPlane" type="Area2D" parent="." unique_id=883156438]
 position = Vector2(122, 1749)

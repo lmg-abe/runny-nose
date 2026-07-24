@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c35skrt5vxyq3"]
+
+[ext_resource type="Script" uid="uid://dbdr6rubc3jt4" path="res://projectile.gd" id="1_41cjm"]
+[ext_resource type="Texture2D" uid="uid://be3fohhlluxlq" path="res://booger.png" id="1_dovaw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_frgu1"]
+radius = 64.0
+
+[node name="Booger" type="Node2D" unique_id=1689774032]
+script = ExtResource("1_41cjm")
+speed = 3000
+
+[node name="Booger" type="Sprite2D" parent="." unique_id=80726587]
+position = Vector2(1.0000038, -5.000001)
+scale = Vector2(0.20892577, 0.20892577)
+texture = ExtResource("1_dovaw")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=603538779]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=208088183]
+shape = SubResource("CircleShape2D_frgu1")

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://btpfyj30kpy0v" path="res://runnyNoseStand.png" id="1_ahjt7"]
 [ext_resource type="Script" uid="uid://bwdlr4xoffopo" path="res://player_movement.gd" id="1_m4je5"]
+[ext_resource type="PackedScene" uid="uid://c35skrt5vxyq3" path="res://booger.tscn" id="2_p138b"]
 [ext_resource type="Script" uid="uid://c26216nb67ra" path="res://hand_area.gd" id="3_jak1u"]
 [ext_resource type="AudioStream" uid="uid://ccl8j4rem7srp" path="res://jump.wav" id="4_n6g0t"]
 [ext_resource type="AudioStream" uid="uid://ioq5trck564i" path="res://landing.wav" id="5_47hsa"]
@@ -19,6 +20,7 @@ size = Vector2(120, 120)
 
 [node name="Runny" type="CharacterBody2D" unique_id=1298635211]
 script = ExtResource("1_m4je5")
+booger = ExtResource("2_p138b")
 
 [node name="Visible" type="Node2D" parent="." unique_id=1238190543]
 position = Vector2(0, 128)
