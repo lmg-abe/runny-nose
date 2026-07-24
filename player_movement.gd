@@ -75,6 +75,9 @@ func _physics_process(delta: float) -> void:
 	
 	get_node("Visible").scale.x = 1/get_node("Visible").scale.y
 	
+	if Input.is_action_just_pressed("escape"):
+		get_tree().quit()
+	
 	# set down boxes
 	if holdingThing and Input.is_action_just_pressed("pick_up"):
 		box.position = Vector2(200*facingDirection,28)

@@ -27,6 +27,7 @@
 [ext_resource type="Script" uid="uid://c8w3pedd53h53" path="res://booger_catcher.gd" id="23_6bsd4"]
 [ext_resource type="Texture2D" uid="uid://u01vfwx607of" path="res://booger_catcher_catcher.png" id="24_66cxk"]
 [ext_resource type="Texture2D" uid="uid://b7cdx4gvm0e5x" path="res://booger_catcher_booger.png" id="25_582bu"]
+[ext_resource type="PackedScene" uid="uid://cio2soswu0h6c" path="res://snot_monster.tscn" id="26_p02il"]
 [ext_resource type="PackedScene" uid="uid://58gwltlc3vcu" path="res://hand_npc.tscn" id="28_q7yup"]
 [ext_resource type="Texture2D" uid="uid://basc5ut81shal" path="res://crate.png" id="29_582bu"]
 
@@ -363,7 +364,7 @@ shape = SubResource("RectangleShape2D_3kj8n")
 [node name="Button2" type="Area2D" parent="." unique_id=765392588]
 position = Vector2(27956, -216)
 script = ExtResource("17_66cxk")
-doorObj = "FirstDoor2"
+doorObj = "FirstDoor3"
 
 [node name="Icon" type="Node2D" parent="Button2" unique_id=1370079735]
 scale = Vector2(0.66, 0.66)
@@ -386,7 +387,7 @@ shape = SubResource("RectangleShape2D_3kj8n")
 [node name="Button3" type="Area2D" parent="." unique_id=1102062192]
 position = Vector2(29381, -1141)
 script = ExtResource("17_66cxk")
-doorObj = "FirstDoor2"
+doorObj = "FirstDoor3"
 
 [node name="Icon" type="Node2D" parent="Button3" unique_id=1548092394]
 scale = Vector2(0.66, 0.66)
@@ -409,7 +410,7 @@ shape = SubResource("RectangleShape2D_3kj8n")
 [node name="Button4" type="Area2D" parent="." unique_id=895751401]
 position = Vector2(30175, -1146)
 script = ExtResource("17_66cxk")
-doorObj = "FirstDoor2"
+doorObj = "FirstDoor3"
 
 [node name="Icon" type="Node2D" parent="Button4" unique_id=1496866144]
 scale = Vector2(0.66, 0.66)
@@ -432,7 +433,7 @@ shape = SubResource("RectangleShape2D_3kj8n")
 [node name="Button5" type="Area2D" parent="." unique_id=1049813873]
 position = Vector2(30357, -1146)
 script = ExtResource("17_66cxk")
-doorObj = "FirstDoor2"
+doorObj = "FirstDoor3"
 
 [node name="Icon" type="Node2D" parent="Button5" unique_id=1690900810]
 scale = Vector2(0.66, 0.66)
@@ -1199,6 +1200,9 @@ texture = ExtResource("29_582bu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3" unique_id=781143729]
 shape = SubResource("RectangleShape2D_vcylt")
+
+[node name="SnotMonster" parent="." unique_id=1945784672 instance=ExtResource("26_p02il")]
+position = Vector2(26509, -915)
 
 [connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]
 [connection signal="body_entered" from="BoogerCatcher" to="BoogerCatcher" method="_on_body_entered"]
