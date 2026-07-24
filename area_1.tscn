@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bxurp8851yn4l" path="res://grass.png" id="11_gjxye"]
 [ext_resource type="AudioStream" uid="uid://coq2o4d87r31g" path="res://area_1_music.wav" id="12_hur56"]
 [ext_resource type="Script" uid="uid://ckgwqyfdgxcm2" path="res://checkpoint.gd" id="15_th8es"]
+[ext_resource type="PackedScene" uid="uid://d13bdua4v0bbg" path="res://damage_hitbox.tscn" id="16_ayu7x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qacl"]
 size = Vector2(200000, 1024)
@@ -144,7 +145,6 @@ text = "test"
 script = ExtResource("5_dfmo5")
 
 [node name="StaticBody2D" parent="." unique_id=838538383 instance=ExtResource("6_keoi2")]
-visible = false
 position = Vector2(1270, 260)
 scale = Vector2(29.905, 1)
 
@@ -155,6 +155,18 @@ scale = Vector2(29.905, 1)
 [node name="StaticBody2D8" parent="." unique_id=1138478978 instance=ExtResource("6_keoi2")]
 position = Vector2(8599, 196)
 scale = Vector2(29.905, 1)
+
+[node name="StaticBody2D14" parent="." unique_id=1104727426 instance=ExtResource("6_keoi2")]
+position = Vector2(12066, 198)
+scale = Vector2(25, 1)
+
+[node name="StaticBody2D17" parent="." unique_id=724809527 instance=ExtResource("6_keoi2")]
+position = Vector2(15099, 51)
+scale = Vector2(25, 1)
+
+[node name="StaticBody2D19" parent="." unique_id=81950735 instance=ExtResource("6_keoi2")]
+position = Vector2(18209, 54)
+scale = Vector2(25, 1)
 
 [node name="StaticBody2D3" parent="." unique_id=177758370 instance=ExtResource("6_keoi2")]
 position = Vector2(2442, 129)
@@ -180,6 +192,10 @@ scale = Vector2(4, 8)
 position = Vector2(8731, -135)
 scale = Vector2(9, 7)
 
+[node name="StaticBody2D15" parent="." unique_id=1256871599 instance=ExtResource("6_keoi2")]
+position = Vector2(13101.001, -125)
+scale = Vector2(9, 6)
+
 [node name="StaticBody2D9" parent="." unique_id=972263882 instance=ExtResource("6_keoi2")]
 position = Vector2(5725, -343)
 scale = Vector2(3, 1)
@@ -188,12 +204,35 @@ scale = Vector2(3, 1)
 position = Vector2(6817, -449)
 scale = Vector2(3, 1)
 
+[node name="StaticBody2D16" parent="." unique_id=647116815 instance=ExtResource("6_keoi2")]
+position = Vector2(15384.001, -203.99997)
+scale = Vector2(3, 5)
+
+[node name="StaticBody2D21" parent="." unique_id=927699404 instance=ExtResource("6_keoi2")]
+position = Vector2(10003.001, 81.00003)
+scale = Vector2(3, 5)
+
+[node name="StaticBody2D20" parent="." unique_id=2138338062 instance=ExtResource("6_keoi2")]
+position = Vector2(17076, -204)
+scale = Vector2(3, 5)
+
+[node name="StaticBody2D22" parent="." unique_id=2037234850 instance=ExtResource("6_keoi2")]
+position = Vector2(18338, -203.99998)
+scale = Vector2(3, 5)
+
+[node name="StaticBody2D23" parent="." unique_id=2186304 instance=ExtResource("6_keoi2")]
+position = Vector2(19995, -198.99998)
+scale = Vector2(3, 5)
+
+[node name="StaticBody2D18" parent="." unique_id=150221692 instance=ExtResource("6_keoi2")]
+position = Vector2(16182.001, -528.9999)
+scale = Vector2(3, 10)
+
 [node name="StaticBody2D6" parent="." unique_id=485226680 instance=ExtResource("6_keoi2")]
 position = Vector2(3786, 65)
 scale = Vector2(5, 2)
 
 [node name="StaticBody2D2" parent="." unique_id=1952344496 instance=ExtResource("6_keoi2")]
-visible = false
 position = Vector2(-193, -255)
 scale = Vector2(1, 11.905)
 
@@ -386,8 +425,59 @@ position = Vector2(8416, -1020)
 [node name="Collectable10" parent="." unique_id=524775536 instance=ExtResource("7_nboye")]
 position = Vector2(9057, -1038)
 
+[node name="Collectable11" parent="." unique_id=259333316 instance=ExtResource("7_nboye")]
+position = Vector2(10034, -680)
+
+[node name="Collectable12" parent="." unique_id=1642032366 instance=ExtResource("7_nboye")]
+position = Vector2(10075, -338)
+
+[node name="Collectable13" parent="." unique_id=190112663 instance=ExtResource("7_nboye")]
+position = Vector2(12273, -362)
+
+[node name="Collectable14" parent="." unique_id=1655604416 instance=ExtResource("7_nboye")]
+position = Vector2(12485, -720)
+
+[node name="Collectable15" parent="." unique_id=1860817182 instance=ExtResource("7_nboye")]
+position = Vector2(14414, -476)
+
+[node name="Collectable16" parent="." unique_id=922284428 instance=ExtResource("7_nboye")]
+position = Vector2(14040, -655)
+
+[node name="Collectable17" parent="." unique_id=1362452082 instance=ExtResource("7_nboye")]
+position = Vector2(14878, -606)
+
+[node name="Collectable18" parent="." unique_id=1732916562 instance=ExtResource("7_nboye")]
+position = Vector2(15619, -980)
+
+[node name="Collectable19" parent="." unique_id=566649760 instance=ExtResource("7_nboye")]
+position = Vector2(15896, -1265)
+
+[node name="Collectable20" parent="." unique_id=1690496323 instance=ExtResource("7_nboye")]
+position = Vector2(17074, -896)
+
+[node name="Collectable21" parent="." unique_id=248853496 instance=ExtResource("7_nboye")]
+position = Vector2(18376, -874)
+
+[node name="Collectable22" parent="." unique_id=726484577 instance=ExtResource("7_nboye")]
+position = Vector2(19627, -852)
+
+[node name="Collectable23" parent="." unique_id=1762174034 instance=ExtResource("7_nboye")]
+position = Vector2(21407, -796)
+
+[node name="Collectable24" parent="." unique_id=1267282149 instance=ExtResource("7_nboye")]
+position = Vector2(22552, -774)
+
 [node name="BasicEnemy" parent="." unique_id=641976464 instance=ExtResource("8_d5i42")]
 position = Vector2(8728, -664)
+
+[node name="BasicEnemy2" parent="." unique_id=986074217 instance=ExtResource("8_d5i42")]
+position = Vector2(14373, -107)
+
+[node name="BasicEnemy3" parent="." unique_id=645840922 instance=ExtResource("8_d5i42")]
+position = Vector2(15855, -140)
+
+[node name="BasicEnemy4" parent="." unique_id=1127922305 instance=ExtResource("8_d5i42")]
+position = Vector2(16598, -113)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=174514885]
 stream = ExtResource("12_hur56")
@@ -400,6 +490,10 @@ script = ExtResource("15_th8es")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint" unique_id=1388971627]
 position = Vector2(-142, 0)
 shape = SubResource("RectangleShape2D_frgu1")
+
+[node name="DamageHitbox" parent="." unique_id=1883985547 instance=ExtResource("16_ayu7x")]
+position = Vector2(18527, 3)
+scale = Vector2(20, 1)
 
 [connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]
 [connection signal="body_entered" from="Checkpoint" to="Checkpoint" method="_on_body_entered"]
