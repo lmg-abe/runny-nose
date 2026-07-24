@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://gi5ig40fkaw6" path="res://dash.wav" id="7_2m1fe"]
 [ext_resource type="AudioStream" uid="uid://dpb2xthin5g0p" path="res://collect.wav" id="8_h25mt"]
 [ext_resource type="AudioStream" uid="uid://blh55yltlqyd7" path="res://death.wav" id="9_h25mt"]
+[ext_resource type="Texture2D" uid="uid://cnahgu3j0ojw8" path="res://john ear dash.png" id="11_dsyfb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ahjt7"]
 radius = 64.0
@@ -57,3 +58,8 @@ stream = ExtResource("8_h25mt")
 
 [node name="death" type="AudioStreamPlayer" parent="." unique_id=1263720639]
 stream = ExtResource("9_h25mt")
+
+[node name="JohnEar" type="Sprite2D" parent="." unique_id=1460349257]
+position = Vector2(4, -11)
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("11_dsyfb")
