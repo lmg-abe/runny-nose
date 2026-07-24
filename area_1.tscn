@@ -20,9 +20,23 @@
 [ext_resource type="Texture2D" uid="uid://1ddbgfgwx2qd" path="res://spikes.png" id="14_r73l4"]
 [ext_resource type="Script" uid="uid://ckgwqyfdgxcm2" path="res://checkpoint.gd" id="15_th8es"]
 [ext_resource type="PackedScene" uid="uid://d13bdua4v0bbg" path="res://damage_hitbox.tscn" id="16_ayu7x"]
+[ext_resource type="Script" uid="uid://blpj6ovlekaq6" path="res://openAndClose.gd" id="21_u440q"]
+[ext_resource type="Texture2D" uid="uid://dlf5icdh8xagf" path="res://vines.png" id="22_p02il"]
+[ext_resource type="Script" uid="uid://c8w3pedd53h53" path="res://booger_catcher.gd" id="23_6bsd4"]
+[ext_resource type="Texture2D" uid="uid://u01vfwx607of" path="res://booger_catcher_catcher.png" id="24_66cxk"]
+[ext_resource type="Texture2D" uid="uid://b7cdx4gvm0e5x" path="res://booger_catcher_booger.png" id="25_582bu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qacl"]
 size = Vector2(200000, 1024)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7yup"]
+size = Vector2(128, 512)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7uh3c"]
+size = Vector2(128, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2562f"]
+size = Vector2(100, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frgu1"]
 size = Vector2(128, 2000000)
@@ -158,7 +172,53 @@ theme_override_font_sizes/font_size = 20
 text = "test"
 script = ExtResource("5_dfmo5")
 
+[node name="FirstDoor" type="StaticBody2D" parent="." unique_id=1289804808]
+position = Vector2(23187, -1583)
+script = ExtResource("21_u440q")
+
+[node name="Vines" type="Sprite2D" parent="FirstDoor" unique_id=1095730529]
+texture_repeat = 3
+position = Vector2(1.9999999, 99)
+scale = Vector2(0.835, 0.835)
+texture = ExtResource("22_p02il")
+region_rect = Rect2(195.257, 114.326, 209.366, 412.061)
+
+[node name="Vines2" type="Sprite2D" parent="FirstDoor" unique_id=465177581]
+texture_repeat = 3
+position = Vector2(1.9999999, -174.99997)
+scale = Vector2(0.835, 0.835)
+texture = ExtResource("22_p02il")
+region_rect = Rect2(195.257, 114.326, 209.366, 412.061)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FirstDoor" unique_id=38017333]
+shape = SubResource("RectangleShape2D_q7yup")
+
+[node name="BoogerCatcher" type="Area2D" parent="." unique_id=823190304]
+position = Vector2(22741, -1382)
+script = ExtResource("23_6bsd4")
+doorObj = "FirstDoor"
+
+[node name="Icon" type="Sprite2D" parent="BoogerCatcher" unique_id=194469414]
+position = Vector2(0, -10.025)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("24_66cxk")
+
+[node name="Icon_Booger" type="Sprite2D" parent="BoogerCatcher/Icon" unique_id=1291209751]
+visible = false
+position = Vector2(6, -27.950012)
+texture = ExtResource("25_582bu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoogerCatcher" unique_id=567541518]
+shape = SubResource("RectangleShape2D_7uh3c")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BoogerCatcher" unique_id=1534999952]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoogerCatcher/StaticBody2D" unique_id=789618147]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_2562f")
+
 [node name="StaticBody2D" parent="." unique_id=838538383 instance=ExtResource("6_keoi2")]
+visible = false
 position = Vector2(1270, 260)
 scale = Vector2(29.905, 1)
 
@@ -179,8 +239,8 @@ position = Vector2(15099, 51)
 scale = Vector2(25, 1)
 
 [node name="StaticBody2D19" parent="." unique_id=81950735 instance=ExtResource("6_keoi2")]
-position = Vector2(18209, 54)
-scale = Vector2(25, 1)
+position = Vector2(19352.002, 54)
+scale = Vector2(52.64, 1)
 
 [node name="StaticBody2D3" parent="." unique_id=177758370 instance=ExtResource("6_keoi2")]
 position = Vector2(2442, 129)
@@ -239,8 +299,24 @@ position = Vector2(18338, -203.99998)
 scale = Vector2(3, 5)
 
 [node name="StaticBody2D23" parent="." unique_id=2186304 instance=ExtResource("6_keoi2")]
-position = Vector2(19995, -198.99998)
+position = Vector2(19995, -204)
 scale = Vector2(3, 5)
+
+[node name="StaticBody2D27" parent="." unique_id=1366820043 instance=ExtResource("6_keoi2")]
+position = Vector2(22987, -375.00003)
+scale = Vector2(10, 15)
+
+[node name="StaticBody2D28" parent="." unique_id=1319599248 instance=ExtResource("6_keoi2")]
+position = Vector2(23000, -2854.0002)
+scale = Vector2(10, 15)
+
+[node name="StaticBody2D25" parent="." unique_id=1672095822 instance=ExtResource("6_keoi2")]
+position = Vector2(21008, -378)
+scale = Vector2(3, 1)
+
+[node name="StaticBody2D26" parent="." unique_id=1835955862 instance=ExtResource("6_keoi2")]
+position = Vector2(21720, -878)
+scale = Vector2(3, 1)
 
 [node name="StaticBody2D18" parent="." unique_id=150221692 instance=ExtResource("6_keoi2")]
 position = Vector2(16182.001, -528.9999)
@@ -251,13 +327,14 @@ position = Vector2(3786, 65)
 scale = Vector2(5, 2)
 
 [node name="StaticBody2D2" parent="." unique_id=1952344496 instance=ExtResource("6_keoi2")]
+visible = false
 position = Vector2(-193, -255)
 scale = Vector2(1, 11.905)
 
 [node name="NinePatchRect6" type="NinePatchRect" parent="." unique_id=2097562094]
 offset_left = 3513.0
 offset_top = 83.0
-offset_right = 23140.0
+offset_right = 20103.0
 offset_bottom = 1354.0
 texture = ExtResource("11_gjxye")
 region_rect = Rect2(188, 208, 208, 240)
@@ -285,7 +362,7 @@ axis_stretch_vertical = 1
 [node name="NinePatchRect14" type="NinePatchRect" parent="." unique_id=681252138]
 offset_left = 13304.0
 offset_top = -70.0
-offset_right = 19999.0
+offset_right = 24023.0
 offset_bottom = 1524.0
 texture = ExtResource("11_gjxye")
 region_rect = Rect2(188, 208, 208, 240)
@@ -380,6 +457,34 @@ patch_margin_bottom = 48
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[node name="NinePatchRect21" type="NinePatchRect" parent="." unique_id=724586908]
+offset_left = 22293.0
+offset_top = -1395.0
+offset_right = 23662.0
+offset_bottom = 691.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect22" type="NinePatchRect" parent="." unique_id=849857650]
+offset_left = 22318.0
+offset_top = -3921.0
+offset_right = 23687.0
+offset_bottom = -1835.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
 [node name="NinePatchRect17" type="NinePatchRect" parent="." unique_id=1160223059]
 offset_left = 15453.0
 offset_top = -296.0
@@ -441,6 +546,34 @@ offset_left = 5513.0
 offset_top = -454.0
 offset_right = 5946.0
 offset_bottom = -232.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect23" type="NinePatchRect" parent="." unique_id=1441622813]
+offset_left = 20790.0
+offset_top = -493.0
+offset_right = 21223.0
+offset_bottom = -271.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect24" type="NinePatchRect" parent="." unique_id=82264796]
+offset_left = 21510.0
+offset_top = -988.0
+offset_right = 21943.0
+offset_bottom = -766.0
 texture = ExtResource("11_gjxye")
 region_rect = Rect2(188, 208, 208, 240)
 patch_margin_left = 32
@@ -562,6 +695,34 @@ texture = ExtResource("14_r73l4")
 position = Vector2(19611, -62)
 texture = ExtResource("14_r73l4")
 
+[node name="Spikes8" type="Sprite2D" parent="." unique_id=1849695775]
+position = Vector2(20378, -62)
+texture = ExtResource("14_r73l4")
+
+[node name="Spikes9" type="Sprite2D" parent="." unique_id=1325696285]
+position = Vector2(20681, -62)
+texture = ExtResource("14_r73l4")
+
+[node name="Spikes10" type="Sprite2D" parent="." unique_id=435126690]
+position = Vector2(20986, -62)
+texture = ExtResource("14_r73l4")
+
+[node name="Spikes11" type="Sprite2D" parent="." unique_id=1648632348]
+position = Vector2(21284, -62)
+texture = ExtResource("14_r73l4")
+
+[node name="Spikes12" type="Sprite2D" parent="." unique_id=1595896769]
+position = Vector2(21581, -62)
+texture = ExtResource("14_r73l4")
+
+[node name="Spikes13" type="Sprite2D" parent="." unique_id=31431053]
+position = Vector2(21866, -62)
+texture = ExtResource("14_r73l4")
+
+[node name="Spikes14" type="Sprite2D" parent="." unique_id=1242716679]
+position = Vector2(22161, -62)
+texture = ExtResource("14_r73l4")
+
 [node name="Runny" parent="." unique_id=1298635211 instance=ExtResource("3_nboye")]
 position = Vector2(268, 1)
 floor_max_angle = 1.4067354
@@ -645,8 +806,20 @@ position = Vector2(18336, -895)
 [node name="Collectable22" parent="." unique_id=726484577 instance=ExtResource("7_nboye")]
 position = Vector2(19992, -869)
 
+[node name="Collectable27" parent="." unique_id=2104957440 instance=ExtResource("7_nboye")]
+position = Vector2(21002, -595)
+
+[node name="Collectable28" parent="." unique_id=1899662037 instance=ExtResource("7_nboye")]
+position = Vector2(21715, -1097)
+
+[node name="Collectable29" parent="." unique_id=1565722374 instance=ExtResource("7_nboye")]
+position = Vector2(21247, -991)
+
 [node name="BasicEnemy" parent="." unique_id=641976464 instance=ExtResource("8_d5i42")]
 position = Vector2(8728, -664)
+
+[node name="BasicEnemy5" parent="." unique_id=2015580386 instance=ExtResource("8_d5i42")]
+position = Vector2(11587, -11)
 
 [node name="BasicEnemy2" parent="." unique_id=986074217 instance=ExtResource("8_d5i42")]
 position = Vector2(14373, -107)
@@ -682,6 +855,12 @@ shape = SubResource("RectangleShape2D_frgu1")
 position = Vector2(18527, 3)
 scale = Vector2(20, 1)
 
+[node name="DamageHitbox2" parent="." unique_id=178684260 instance=ExtResource("16_ayu7x")]
+position = Vector2(21073, -12)
+scale = Vector2(20, 1)
+
 [connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]
+[connection signal="body_entered" from="BoogerCatcher" to="BoogerCatcher" method="_on_body_entered"]
+[connection signal="body_exited" from="BoogerCatcher" to="BoogerCatcher" method="_on_body_exited"]
 [connection signal="body_entered" from="Checkpoint" to="Checkpoint" method="_on_body_entered"]
 [connection signal="body_entered" from="Checkpoint2" to="Checkpoint2" method="_on_body_entered"]
