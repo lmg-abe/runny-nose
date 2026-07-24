@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://brljtl8dtb34e" path="res://bg_mushroom.png" id="8_r73l4"]
 [ext_resource type="Texture2D" uid="uid://bxurp8851yn4l" path="res://grass.png" id="11_gjxye"]
 [ext_resource type="AudioStream" uid="uid://coq2o4d87r31g" path="res://area_1_music.wav" id="12_hur56"]
+[ext_resource type="Texture2D" uid="uid://1ddbgfgwx2qd" path="res://spikes.png" id="14_r73l4"]
 [ext_resource type="Script" uid="uid://ckgwqyfdgxcm2" path="res://checkpoint.gd" id="15_th8es"]
 [ext_resource type="PackedScene" uid="uid://d13bdua4v0bbg" path="res://damage_hitbox.tscn" id="16_ayu7x"]
 
@@ -221,6 +222,10 @@ scale = Vector2(3, 1)
 position = Vector2(15384.001, -203.99997)
 scale = Vector2(3, 5)
 
+[node name="StaticBody2D24" parent="." unique_id=1528973272 instance=ExtResource("6_keoi2")]
+position = Vector2(15786.001, 92.00003)
+scale = Vector2(3, 5)
+
 [node name="StaticBody2D21" parent="." unique_id=927699404 instance=ExtResource("6_keoi2")]
 position = Vector2(10003.001, 81.00003)
 scale = Vector2(3, 5)
@@ -252,8 +257,134 @@ scale = Vector2(1, 11.905)
 [node name="NinePatchRect6" type="NinePatchRect" parent="." unique_id=2097562094]
 offset_left = 3513.0
 offset_top = 83.0
-offset_right = 12118.0
+offset_right = 23140.0
 offset_bottom = 1354.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect12" type="NinePatchRect" parent="." unique_id=1231929452]
+offset_left = 9196.0
+offset_top = -293.0
+offset_right = 10239.0
+offset_bottom = 978.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect14" type="NinePatchRect" parent="." unique_id=681252138]
+offset_left = 13304.0
+offset_top = -70.0
+offset_right = 19999.0
+offset_bottom = 1524.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect13" type="NinePatchRect" parent="." unique_id=1317348302]
+offset_left = 12496.0
+offset_top = -562.0
+offset_right = 13713.0
+offset_bottom = 1032.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect15" type="NinePatchRect" parent="." unique_id=876109394]
+offset_left = 15150.0
+offset_top = -586.0
+offset_right = 15611.0
+offset_bottom = 1008.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect16" type="NinePatchRect" parent="." unique_id=1792953192]
+offset_left = 15946.0
+offset_top = -1222.0
+offset_right = 16407.0
+offset_bottom = 864.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect18" type="NinePatchRect" parent="." unique_id=712116588]
+offset_left = 16839.0
+offset_top = -579.0
+offset_right = 17300.0
+offset_bottom = 1507.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect19" type="NinePatchRect" parent="." unique_id=1014083098]
+offset_left = 18108.0
+offset_top = -579.0
+offset_right = 18569.0
+offset_bottom = 1507.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect20" type="NinePatchRect" parent="." unique_id=2122889115]
+offset_left = 19764.0
+offset_top = -585.0
+offset_right = 20225.0
+offset_bottom = 1501.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect17" type="NinePatchRect" parent="." unique_id=1160223059]
+offset_left = 15453.0
+offset_top = -296.0
+offset_right = 16059.0
+offset_bottom = 1790.0
 texture = ExtResource("11_gjxye")
 region_rect = Rect2(188, 208, 208, 240)
 patch_margin_left = 32
@@ -403,6 +534,34 @@ patch_margin_bottom = 48
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[node name="Spikes" type="Sprite2D" parent="." unique_id=1613694763]
+position = Vector2(17437, -63)
+texture = ExtResource("14_r73l4")
+
+[node name="Spikes2" type="Sprite2D" parent="." unique_id=1178716767]
+position = Vector2(17716, -61)
+texture = ExtResource("14_r73l4")
+
+[node name="Spikes3" type="Sprite2D" parent="." unique_id=362391667]
+position = Vector2(17988, -59)
+texture = ExtResource("14_r73l4")
+
+[node name="Spikes4" type="Sprite2D" parent="." unique_id=196339368]
+position = Vector2(18704, -63)
+texture = ExtResource("14_r73l4")
+
+[node name="Spikes5" type="Sprite2D" parent="." unique_id=167531997]
+position = Vector2(18994, -61)
+texture = ExtResource("14_r73l4")
+
+[node name="Spikes6" type="Sprite2D" parent="." unique_id=284082434]
+position = Vector2(19294, -63)
+texture = ExtResource("14_r73l4")
+
+[node name="Spikes7" type="Sprite2D" parent="." unique_id=1008760287]
+position = Vector2(19611, -62)
+texture = ExtResource("14_r73l4")
+
 [node name="Runny" parent="." unique_id=1298635211 instance=ExtResource("3_nboye")]
 position = Vector2(268, 1)
 floor_max_angle = 1.4067354
@@ -439,16 +598,19 @@ position = Vector2(8416, -1020)
 position = Vector2(9057, -1038)
 
 [node name="Collectable11" parent="." unique_id=259333316 instance=ExtResource("7_nboye")]
-position = Vector2(10034, -680)
+position = Vector2(10034, -911)
 
 [node name="Collectable12" parent="." unique_id=1642032366 instance=ExtResource("7_nboye")]
-position = Vector2(10075, -338)
+position = Vector2(10041, -447)
 
 [node name="Collectable13" parent="." unique_id=190112663 instance=ExtResource("7_nboye")]
-position = Vector2(12273, -362)
+position = Vector2(12299, -362)
 
 [node name="Collectable14" parent="." unique_id=1655604416 instance=ExtResource("7_nboye")]
-position = Vector2(12485, -720)
+position = Vector2(12307, -724)
+
+[node name="Collectable25" parent="." unique_id=859257367 instance=ExtResource("7_nboye")]
+position = Vector2(12670, -728)
 
 [node name="Collectable15" parent="." unique_id=1860817182 instance=ExtResource("7_nboye")]
 position = Vector2(14414, -476)
@@ -460,25 +622,28 @@ position = Vector2(14040, -655)
 position = Vector2(14878, -606)
 
 [node name="Collectable18" parent="." unique_id=1732916562 instance=ExtResource("7_nboye")]
-position = Vector2(15619, -980)
+position = Vector2(15793, -959)
+
+[node name="Collectable26" parent="." unique_id=1850268645 instance=ExtResource("7_nboye")]
+position = Vector2(15391, -640)
 
 [node name="Collectable19" parent="." unique_id=566649760 instance=ExtResource("7_nboye")]
-position = Vector2(15896, -1265)
+position = Vector2(16184, -1294)
 
 [node name="Collectable20" parent="." unique_id=1690496323 instance=ExtResource("7_nboye")]
 position = Vector2(17074, -896)
 
+[node name="Collectable23" parent="." unique_id=1092400540 instance=ExtResource("7_nboye")]
+position = Vector2(17701, -599)
+
+[node name="Collectable24" parent="." unique_id=1172716746 instance=ExtResource("7_nboye")]
+position = Vector2(19176, -581)
+
 [node name="Collectable21" parent="." unique_id=248853496 instance=ExtResource("7_nboye")]
-position = Vector2(18376, -874)
+position = Vector2(18336, -895)
 
 [node name="Collectable22" parent="." unique_id=726484577 instance=ExtResource("7_nboye")]
-position = Vector2(19627, -852)
-
-[node name="Collectable23" parent="." unique_id=1762174034 instance=ExtResource("7_nboye")]
-position = Vector2(21407, -796)
-
-[node name="Collectable24" parent="." unique_id=1267282149 instance=ExtResource("7_nboye")]
-position = Vector2(22552, -774)
+position = Vector2(19992, -869)
 
 [node name="BasicEnemy" parent="." unique_id=641976464 instance=ExtResource("8_d5i42")]
 position = Vector2(8728, -664)
@@ -487,7 +652,7 @@ position = Vector2(8728, -664)
 position = Vector2(14373, -107)
 
 [node name="BasicEnemy3" parent="." unique_id=645840922 instance=ExtResource("8_d5i42")]
-position = Vector2(15855, -140)
+position = Vector2(15777, -347)
 
 [node name="BasicEnemy4" parent="." unique_id=1127922305 instance=ExtResource("8_d5i42")]
 position = Vector2(16598, -113)
@@ -504,9 +669,19 @@ script = ExtResource("15_th8es")
 position = Vector2(-142, 0)
 shape = SubResource("RectangleShape2D_frgu1")
 
+[node name="Checkpoint2" type="Area2D" parent="." unique_id=1064440847]
+position = Vector2(20142, -952)
+script = ExtResource("15_th8es")
+checkpointID = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint2" unique_id=1168377449]
+position = Vector2(-142, 0)
+shape = SubResource("RectangleShape2D_frgu1")
+
 [node name="DamageHitbox" parent="." unique_id=1883985547 instance=ExtResource("16_ayu7x")]
 position = Vector2(18527, 3)
 scale = Vector2(20, 1)
 
 [connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]
 [connection signal="body_entered" from="Checkpoint" to="Checkpoint" method="_on_body_entered"]
+[connection signal="body_entered" from="Checkpoint2" to="Checkpoint2" method="_on_body_entered"]
