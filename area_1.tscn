@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dqj4ji5fr6llu" path="res://bg_bush.png" id="7_rulab"]
 [ext_resource type="PackedScene" uid="uid://dx3ma57wvrfwy" path="res://basic_enemy.tscn" id="8_d5i42"]
 [ext_resource type="Texture2D" uid="uid://brljtl8dtb34e" path="res://bg_mushroom.png" id="8_r73l4"]
+[ext_resource type="Texture2D" uid="uid://dy1yphh6gqqsg" path="res://sign.png" id="9_2562f"]
 [ext_resource type="Texture2D" uid="uid://bxurp8851yn4l" path="res://grass.png" id="11_gjxye"]
 [ext_resource type="AudioStream" uid="uid://coq2o4d87r31g" path="res://area_1_music.wav" id="12_hur56"]
 [ext_resource type="Texture2D" uid="uid://1ddbgfgwx2qd" path="res://spikes.png" id="14_r73l4"]
@@ -200,6 +201,72 @@ texture = ExtResource("5_r2afo")
 [node name="BgTree7" type="Sprite2D" parent="BgTree" unique_id=2012094098]
 position = Vector2(27295, -1556)
 texture = ExtResource("4_lx7ru")
+
+[node name="BgStump8" type="Sprite2D" parent="BgTree" unique_id=1569523187]
+position = Vector2(26573, -203)
+texture = ExtResource("5_r2afo")
+
+[node name="BgMushroom8" type="Sprite2D" parent="BgTree" unique_id=2084633634]
+position = Vector2(27986, -1129)
+texture = ExtResource("8_r73l4")
+
+[node name="BgFallenLog8" type="Sprite2D" parent="BgTree" unique_id=594264040]
+position = Vector2(29315, -1122)
+texture = ExtResource("6_q5abr")
+
+[node name="Sign" type="Sprite2D" parent="." unique_id=1969201772]
+position = Vector2(12346.39, 14.125004)
+scale = Vector2(0.5088785, 0.5088786)
+texture = ExtResource("9_2562f")
+
+[node name="Label" type="Label" parent="Sign" unique_id=539982517]
+offset_left = -179.58896
+offset_top = -149.59364
+offset_right = 180.02432
+offset_bottom = -8.687332
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0.59, 0.41585168, 0.1357, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 76
+text = "[1] / [P]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sign2" type="Sprite2D" parent="." unique_id=454649884]
+position = Vector2(25328, -1164.0001)
+scale = Vector2(0.5088785, 0.5088786)
+texture = ExtResource("9_2562f")
+
+[node name="Label" type="Label" parent="Sign2" unique_id=1606321824]
+offset_left = -179.58896
+offset_top = -149.59364
+offset_right = 180.02432
+offset_bottom = -8.687332
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0.59, 0.41585168, 0.1357, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 76
+text = "[2] / [O]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sign3" type="Sprite2D" parent="." unique_id=915605236]
+position = Vector2(33207, -222)
+scale = Vector2(0.5088785, 0.5088786)
+texture = ExtResource("9_2562f")
+
+[node name="Label" type="Label" parent="Sign3" unique_id=1827775065]
+offset_left = -179.58896
+offset_top = -149.59364
+offset_right = 180.02432
+offset_bottom = -8.687332
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0.59, 0.41585168, 0.1357, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 76
+text = "[3] / [I]"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="DeathPlane" type="Area2D" parent="." unique_id=883156438]
 position = Vector2(122, 1749)
