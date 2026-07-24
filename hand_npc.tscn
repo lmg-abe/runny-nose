@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://58gwltlc3vcu"]
 
 [ext_resource type="Script" uid="uid://bd6qvck6gk1o3" path="res://hand_npc.gd" id="1_iltyl"]
+[ext_resource type="Texture2D" uid="uid://c8rrqcdnklpx0" path="res://handyman.png" id="2_qen3a"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qen3a"]
 radius = 64.0
@@ -8,6 +9,11 @@ height = 256.0
 
 [node name="HandNPC" type="Area2D" unique_id=434802834]
 script = ExtResource("1_iltyl")
+
+[node name="Handyman" type="Sprite2D" parent="." unique_id=1366626168]
+position = Vector2(0, -25)
+scale = Vector2(0.475, 0.475)
+texture = ExtResource("2_qen3a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=229022879]
 shape = SubResource("CapsuleShape2D_qen3a")

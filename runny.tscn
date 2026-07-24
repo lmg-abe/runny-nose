@@ -60,6 +60,7 @@ stream = ExtResource("8_h25mt")
 stream = ExtResource("9_h25mt")
 
 [node name="JohnEar" type="Sprite2D" parent="." unique_id=1460349257]
+visible = false
 position = Vector2(4, -11)
 scale = Vector2(0.52, 0.52)
 texture = ExtResource("11_dsyfb")

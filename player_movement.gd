@@ -101,7 +101,13 @@ func _physics_process(delta: float) -> void:
 	if dashTimer>-1:
 		if velocity.y > 0 :
 			velocity.y = 0
+		get_node("JohnEar").flip_h = (facingDirection<0)
+		get_node("JohnEar").visible = true
+		get_node("Visible").visible = false
 		dashTimer-=1
+	else:
+		get_node("JohnEar").visible = false
+		get_node("Visible").visible = true
 	
 	velocity.x += Input.get_axis("move_left","move_right") * playerSpeed * movementMultiplier
 	velocity.x *= friction

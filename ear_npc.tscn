@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dqm5cpuwo6jsg"]
 
 [ext_resource type="Script" uid="uid://b24dajsefnuo1" path="res://ear_npc.gd" id="1_uye5x"]
+[ext_resource type="Texture2D" uid="uid://jc4ol6qaamst" path="res://john ear.png" id="2_hppri"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qen3a"]
 radius = 64.0
@@ -11,5 +12,9 @@ script = ExtResource("1_uye5x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=229022879]
 shape = SubResource("CapsuleShape2D_qen3a")
+
+[node name="JohnEar" type="Sprite2D" parent="." unique_id=468454983]
+scale = Vector2(0.475, 0.475)
+texture = ExtResource("2_hppri")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
