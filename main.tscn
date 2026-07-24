@@ -4,10 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://cb0enpjyg35ns" path="res://runny.tscn" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://blpj6ovlekaq6" path="res://openAndClose.gd" id="2_kek77"]
 [ext_resource type="Script" uid="uid://pa6468o3rv5a" path="res://button.gd" id="3_5vw27"]
+[ext_resource type="Texture2D" uid="uid://dlf5icdh8xagf" path="res://vines.png" id="3_vivmo"]
 [ext_resource type="Script" uid="uid://5it2uxyvfgis" path="res://cameraFollow.gd" id="4_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://b32c5euv7m8ns" path="res://icon.svg" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://ckdonj4jvyx3n" path="res://button.png" id="5_vivmo"]
 [ext_resource type="Script" uid="uid://dl2ulel2qbav1" path="res://death_plane.gd" id="6_7mycd"]
 [ext_resource type="Script" uid="uid://cpqs4s4ixphnm" path="res://death_counter.gd" id="7_272bh"]
+[ext_resource type="Texture2D" uid="uid://basc5ut81shal" path="res://crate.png" id="7_w48qg"]
 [ext_resource type="PackedScene" uid="uid://bxreok8v3rk8d" path="res://collectable.tscn" id="9_kek77"]
 [ext_resource type="Script" uid="uid://bua7vcu78n8th" path="res://collectable_counter.gd" id="10_4c57u"]
 [ext_resource type="PackedScene" uid="uid://kkyiuw4k8h5a" path="res://goop.tscn" id="11_efxa6"]
@@ -15,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dx3ma57wvrfwy" path="res://basic_enemy.tscn" id="13_ycdy4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frgu1"]
-size = Vector2(128, 128)
+size = Vector2(128, 512)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eo4fi"]
 size = Vector2(128, 64)
@@ -51,21 +53,27 @@ scale = Vector2(4, 1)
 position = Vector2(3661, -712)
 scale = Vector2(4, 1)
 
-[node name="Floor9" parent="." unique_id=49349976 instance=ExtResource("1_h2yge")]
-position = Vector2(6290, -890)
-scale = Vector2(4, 3)
-
 [node name="Floor11" parent="." unique_id=919475628 instance=ExtResource("1_h2yge")]
 position = Vector2(7725, -334.00006)
 scale = Vector2(4, 3)
 
 [node name="Door" type="StaticBody2D" parent="." unique_id=1293151393]
 position = Vector2(6339, -442)
-scale = Vector2(1, 4)
 script = ExtResource("2_kek77")
 
-[node name="Icon" type="Sprite2D" parent="Door" unique_id=593203618]
-texture = ExtResource("5_lquwl")
+[node name="Vines" type="Sprite2D" parent="Door" unique_id=1867746184]
+texture_repeat = 3
+position = Vector2(1.9999999, 99)
+scale = Vector2(0.835, 0.835)
+texture = ExtResource("3_vivmo")
+region_rect = Rect2(195.257, 114.326, 209.366, 412.061)
+
+[node name="Vines2" type="Sprite2D" parent="Door" unique_id=2054912503]
+texture_repeat = 3
+position = Vector2(1.9999999, -174.99997)
+scale = Vector2(0.835, 0.835)
+texture = ExtResource("3_vivmo")
+region_rect = Rect2(195.257, 114.326, 209.366, 412.061)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1103333765]
 shape = SubResource("RectangleShape2D_frgu1")
@@ -74,9 +82,13 @@ shape = SubResource("RectangleShape2D_frgu1")
 position = Vector2(5806, -236)
 script = ExtResource("3_5vw27")
 
-[node name="Icon" type="Sprite2D" parent="Button" unique_id=1540617976]
-scale = Vector2(1, 0.5)
-texture = ExtResource("5_lquwl")
+[node name="Icon" type="Node2D" parent="Button" unique_id=1915512972]
+scale = Vector2(0.66, 0.66)
+
+[node name="BUtton" type="Sprite2D" parent="Button/Icon" unique_id=432264957]
+position = Vector2(-6.060606, -19.69697)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("5_vivmo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button" unique_id=523426723]
 shape = SubResource("RectangleShape2D_eo4fi")
@@ -86,6 +98,10 @@ shape = SubResource("RectangleShape2D_eo4fi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button/StaticBody2D" unique_id=1065708297]
 position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_3kj8n")
+
+[node name="Floor9" parent="." unique_id=49349976 instance=ExtResource("1_h2yge")]
+position = Vector2(6290, -890)
+scale = Vector2(4, 3)
 
 [node name="Floor8" parent="." unique_id=458735410 instance=ExtResource("1_h2yge")]
 position = Vector2(4985, -140)
@@ -141,8 +157,10 @@ position = Vector2(4171, -621)
 gravity_scale = 4.0
 lock_rotation = true
 
-[node name="Icon" type="Sprite2D" parent="RigidBody2D" unique_id=133866622]
-texture = ExtResource("5_lquwl")
+[node name="Crate" type="Sprite2D" parent="RigidBody2D" unique_id=741892742]
+position = Vector2(1, -9)
+scale = Vector2(0.865, 0.865)
+texture = ExtResource("7_w48qg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=722882572]
 shape = SubResource("RectangleShape2D_272bh")
