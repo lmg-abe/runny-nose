@@ -13,5 +13,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	myPos = get_position()
 	playerPos = get_parent().get_node("Runny").position
+	if (playerPos.x<1300):
+		playerPos.x=1300
+	if (playerPos.y>128*-3):
+		playerPos.y=128*-3
 	
 	set_position(myPos+(Vector2(playerPos.x-myPos.x,playerPos.y-myPos.y))/smoothing)

@@ -23,13 +23,12 @@ zoom = Vector2(0.4, 0.4)
 script = ExtResource("1_1rxqu")
 
 [node name="Paper" type="Sprite2D" parent="Camera2D" unique_id=692617652]
-modulate = Color(0.12479999, 0.48, 0.12479999, 1)
+modulate = Color(0.1254902, 0.47843137, 0.1254902, 1)
 texture_repeat = 3
-rotation = 1.5707964
 scale = Vector2(2, 2)
 texture = ExtResource("2_dfmo5")
 region_enabled = true
-region_rect = Rect2(0, 853, 1280, 17070)
+region_rect = Rect2(853, 0, 34140, 1280)
 script = ExtResource("3_7qacl")
 
 [node name="DeathPlane" type="Area2D" parent="." unique_id=883156438]
@@ -83,6 +82,7 @@ text = "test"
 script = ExtResource("5_dfmo5")
 
 [node name="StaticBody2D" parent="." unique_id=838538383 instance=ExtResource("6_keoi2")]
+visible = false
 position = Vector2(1270, 260)
 scale = Vector2(29.905, 1)
 
@@ -131,11 +131,11 @@ position = Vector2(3786, 65)
 scale = Vector2(5, 2)
 
 [node name="StaticBody2D2" parent="." unique_id=1952344496 instance=ExtResource("6_keoi2")]
+visible = false
 position = Vector2(-193, -255)
 scale = Vector2(1, 11.905)
 
 [node name="NinePatchRect6" type="NinePatchRect" parent="." unique_id=2097562094]
-visible = false
 offset_left = 3513.0
 offset_top = 83.0
 offset_right = 12118.0
@@ -149,8 +149,49 @@ patch_margin_bottom = 48
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[node name="NinePatchRect9" type="NinePatchRect" parent="." unique_id=519679433]
+offset_left = 7610.0
+offset_top = -763.0
+offset_right = 8184.0
+offset_bottom = 1560.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect11" type="NinePatchRect" parent="." unique_id=1784385158]
+offset_left = 9280.0
+offset_top = -766.0
+offset_right = 9854.0
+offset_bottom = 1557.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect10" type="NinePatchRect" parent="." unique_id=1281158524]
+offset_left = 8134.0
+offset_top = -636.0
+offset_right = 9326.0
+offset_bottom = 1687.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
 [node name="NinePatchRect7" type="NinePatchRect" parent="." unique_id=1614676304]
-visible = false
 offset_left = 5513.0
 offset_top = -454.0
 offset_right = 5946.0
@@ -164,8 +205,21 @@ patch_margin_bottom = 48
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[node name="NinePatchRect8" type="NinePatchRect" parent="." unique_id=1391374675]
+offset_left = 6598.0
+offset_top = -558.0
+offset_right = 7031.0
+offset_bottom = -336.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
 [node name="NinePatchRect2" type="NinePatchRect" parent="." unique_id=1139790082]
-visible = false
 offset_left = 2167.0
 offset_top = 22.0
 offset_right = 2743.0
@@ -180,7 +234,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect4" type="NinePatchRect" parent="." unique_id=470678578]
-visible = false
 offset_left = 3435.0
 offset_top = -108.0
 offset_right = 4125.0
@@ -195,7 +248,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect3" type="NinePatchRect" parent="." unique_id=2058014100]
-visible = false
 offset_left = 2676.0
 offset_top = -240.0
 offset_right = 3492.0
@@ -210,7 +262,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect5" type="NinePatchRect" parent="." unique_id=470893135]
-visible = false
 offset_left = 4077.0
 offset_top = -237.0
 offset_right = 4893.0
@@ -225,7 +276,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1791251047]
-visible = false
 offset_left = -151.0
 offset_top = 148.0
 offset_right = 2237.0
