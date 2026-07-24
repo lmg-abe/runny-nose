@@ -99,6 +99,49 @@ shape = SubResource("RectangleShape2D_eo4fi")
 position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_3kj8n")
 
+[node name="Door2" type="StaticBody2D" parent="." unique_id=1786427026]
+position = Vector2(8756, -442)
+script = ExtResource("2_kek77")
+
+[node name="Vines" type="Sprite2D" parent="Door2" unique_id=753011147]
+texture_repeat = 3
+position = Vector2(1.9999999, 99)
+scale = Vector2(0.835, 0.835)
+texture = ExtResource("3_vivmo")
+region_rect = Rect2(195.257, 114.326, 209.366, 412.061)
+
+[node name="Vines2" type="Sprite2D" parent="Door2" unique_id=723059771]
+texture_repeat = 3
+position = Vector2(1.9999999, -174.99997)
+scale = Vector2(0.835, 0.835)
+texture = ExtResource("3_vivmo")
+region_rect = Rect2(195.257, 114.326, 209.366, 412.061)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door2" unique_id=455882740]
+shape = SubResource("RectangleShape2D_frgu1")
+
+[node name="Button2" type="Area2D" parent="." unique_id=1976736023]
+position = Vector2(8223, -236)
+script = ExtResource("3_5vw27")
+doorObj = "Door2"
+
+[node name="Icon" type="Node2D" parent="Button2" unique_id=1437207913]
+scale = Vector2(0.66, 0.66)
+
+[node name="BUtton" type="Sprite2D" parent="Button2/Icon" unique_id=648721724]
+position = Vector2(-6.060606, -19.69697)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("5_vivmo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button2" unique_id=1282630947]
+shape = SubResource("RectangleShape2D_eo4fi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Button2" unique_id=440133789]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button2/StaticBody2D" unique_id=1665709876]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_3kj8n")
+
 [node name="Floor9" parent="." unique_id=49349976 instance=ExtResource("1_h2yge")]
 position = Vector2(6290, -890)
 scale = Vector2(4, 3)
@@ -231,4 +274,6 @@ position = Vector2(6784, -351)
 
 [connection signal="body_entered" from="Button" to="Button" method="_on_body_entered"]
 [connection signal="body_exited" from="Button" to="Button" method="_on_body_exited"]
+[connection signal="body_entered" from="Button2" to="Button2" method="_on_body_entered"]
+[connection signal="body_exited" from="Button2" to="Button2" method="_on_body_exited"]
 [connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]
