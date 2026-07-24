@@ -71,69 +71,113 @@ region_rect = Rect2(853, 0, 34140, 3840)
 script = ExtResource("3_7qacl")
 
 [node name="BgTree" type="Sprite2D" parent="." unique_id=268352074]
-modulate = Color(0.82, 0.82, 0.82, 1)
+modulate = Color(0.67, 0.67, 0.67, 1)
 position = Vector2(1182, -46)
 texture = ExtResource("4_lx7ru")
 
 [node name="BgStump" type="Sprite2D" parent="BgTree" unique_id=1362299212]
-modulate = Color(0.82, 0.82, 0.82, 1)
 position = Vector2(649, 184)
 texture = ExtResource("5_r2afo")
 
 [node name="BgTree2" type="Sprite2D" parent="BgTree" unique_id=288036235]
-modulate = Color(0.82, 0.82, 0.82, 1)
 position = Vector2(1686, -397)
 texture = ExtResource("4_lx7ru")
 
 [node name="BgFallenLog" type="Sprite2D" parent="BgTree" unique_id=1746722684]
-modulate = Color(0.82, 0.82, 0.82, 1)
 position = Vector2(1251, 51)
 texture = ExtResource("6_q5abr")
 
 [node name="BgBush" type="Sprite2D" parent="BgTree" unique_id=346025221]
-modulate = Color(0.82, 0.82, 0.82, 1)
 position = Vector2(2595, -129)
 texture = ExtResource("7_rulab")
 
 [node name="BgMushroom" type="Sprite2D" parent="BgTree" unique_id=360225380]
-modulate = Color(0.82, 0.82, 0.82, 1)
 position = Vector2(2997, -195)
 texture = ExtResource("8_r73l4")
 
 [node name="BgMushroom2" type="Sprite2D" parent="BgTree" unique_id=329893803]
-modulate = Color(0.82, 0.82, 0.82, 1)
 position = Vector2(1210, -19)
 texture = ExtResource("8_r73l4")
 
 [node name="BgTree" type="Sprite2D" parent="BgTree" unique_id=2003571099]
-modulate = Color(0.82, 0.82, 0.82, 1)
 position = Vector2(5127, -76)
 texture = ExtResource("4_lx7ru")
 
 [node name="BgStump2" type="Sprite2D" parent="BgTree" unique_id=995712868]
-modulate = Color(0.82, 0.82, 0.82, 1)
 position = Vector2(4065, 125)
 texture = ExtResource("5_r2afo")
 
 [node name="BgMushroom3" type="Sprite2D" parent="BgTree" unique_id=1782582880]
-modulate = Color(0.82, 0.82, 0.82, 1)
 position = Vector2(5499, -511)
 texture = ExtResource("8_r73l4")
 
 [node name="BgFallenLog2" type="Sprite2D" parent="BgTree" unique_id=948698513]
-modulate = Color(0.82, 0.82, 0.82, 1)
 position = Vector2(5319, 111)
 texture = ExtResource("6_q5abr")
 
 [node name="BgTree3" type="Sprite2D" parent="BgTree" unique_id=1488280561]
-modulate = Color(0.82, 0.82, 0.82, 1)
 position = Vector2(6872, -916)
 texture = ExtResource("4_lx7ru")
 
 [node name="BgFallenLog3" type="Sprite2D" parent="BgTree" unique_id=907203671]
-modulate = Color(0.82, 0.82, 0.82, 1)
 position = Vector2(7909, -601)
 texture = ExtResource("6_q5abr")
+
+[node name="BgTree4" type="Sprite2D" parent="BgTree" unique_id=1148679484]
+position = Vector2(10641, -63)
+texture = ExtResource("4_lx7ru")
+
+[node name="BgStump3" type="Sprite2D" parent="BgTree" unique_id=1217385642]
+position = Vector2(9556, 117)
+texture = ExtResource("5_r2afo")
+
+[node name="BgBush2" type="Sprite2D" parent="BgTree" unique_id=543909260]
+position = Vector2(11934, -574)
+texture = ExtResource("7_rulab")
+
+[node name="BgMushroom4" type="Sprite2D" parent="BgTree" unique_id=898863773]
+position = Vector2(11499, -513)
+texture = ExtResource("8_r73l4")
+
+[node name="BgStump4" type="Sprite2D" parent="BgTree" unique_id=286253509]
+position = Vector2(12640, -41)
+texture = ExtResource("5_r2afo")
+
+[node name="BgFallenLog4" type="Sprite2D" parent="BgTree" unique_id=954813355]
+position = Vector2(13706, -29)
+texture = ExtResource("6_q5abr")
+
+[node name="BgMushroom5" type="Sprite2D" parent="BgTree" unique_id=1878137612]
+position = Vector2(13795, -22)
+texture = ExtResource("8_r73l4")
+
+[node name="BgTree5" type="Sprite2D" parent="BgTree" unique_id=195007980]
+position = Vector2(15015, -1385)
+texture = ExtResource("4_lx7ru")
+
+[node name="BgFallenLog5" type="Sprite2D" parent="BgTree" unique_id=715289285]
+position = Vector2(14592, -261)
+texture = ExtResource("6_q5abr")
+
+[node name="BgStump5" type="Sprite2D" parent="BgTree" unique_id=978914165]
+position = Vector2(15873, -554)
+texture = ExtResource("5_r2afo")
+
+[node name="BgMushroom6" type="Sprite2D" parent="BgTree" unique_id=1921868882]
+position = Vector2(17000, -536)
+texture = ExtResource("8_r73l4")
+
+[node name="BgFallenLog6" type="Sprite2D" parent="BgTree" unique_id=1864368181]
+position = Vector2(17241, -551)
+texture = ExtResource("6_q5abr")
+
+[node name="BgTree6" type="Sprite2D" parent="BgTree" unique_id=1658945969]
+position = Vector2(18733, -729)
+texture = ExtResource("4_lx7ru")
+
+[node name="BgStump6" type="Sprite2D" parent="BgTree" unique_id=1541693755]
+position = Vector2(21237, -1360)
+texture = ExtResource("5_r2afo")
 
 [node name="DeathPlane" type="Area2D" parent="." unique_id=883156438]
 position = Vector2(122, 1749)
