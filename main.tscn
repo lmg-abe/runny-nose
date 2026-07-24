@@ -99,6 +99,7 @@ texture = ExtResource("5_vivmo")
 shape = SubResource("RectangleShape2D_eo4fi")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Button" unique_id=1351238849]
+position = Vector2(0, 33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button/StaticBody2D" unique_id=1065708297]
 position = Vector2(0, 16)

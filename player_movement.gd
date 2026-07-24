@@ -80,6 +80,7 @@ func _physics_process(delta: float) -> void:
 		box.freeze = false
 		holdingThing = false
 		box.reparent(get_parent())
+		get_node("put_down").play()
 	
 	# move HandArea to the side the player is facing
 	get_node("HandArea").position = Vector2(150*facingDirection,60)
@@ -93,6 +94,7 @@ func _physics_process(delta: float) -> void:
 				body.position = Vector2(0,-200)
 				holdingThing = true
 				box = body
+				get_node("pick_up").play()
 	
 	#print(position.x)			
 	
@@ -106,10 +108,22 @@ func _physics_process(delta: float) -> void:
 			velocity.y = 0
 		get_node("JohnEar").flip_h = (facingDirection<0)
 		get_node("JohnEar").visible = true
+		get_node("Handyman_walk2").visible = false
 		get_node("Visible").visible = false
 		dashTimer-=1
+	elif holdingThing:
+		get_node("JohnEar").visible = false
+		get_node("Visible").visible = false
+		if walkAnim<=int(10.0/movementMultiplier):
+			get_node("Handyman_walk1").visible = false
+			get_node("Handyman_walk2").visible = true
+		else:
+			get_node("Handyman_walk1").visible = true
+			get_node("Handyman_walk2").visible = false
 	else:
 		get_node("JohnEar").visible = false
+		get_node("Handyman_walk1").visible = false
+		get_node("Handyman_walk2").visible = false
 		get_node("Visible").visible = true
 	
 	velocity.x += Input.get_axis("move_left","move_right") * playerSpeed * movementMultiplier
