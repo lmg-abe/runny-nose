@@ -314,6 +314,27 @@ region_rect = Rect2(195.257, 114.326, 209.366, 412.061)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FirstDoor4" unique_id=1549915020]
 shape = SubResource("RectangleShape2D_q7yup")
 
+[node name="FirstDoor5" type="StaticBody2D" parent="." unique_id=1040094030]
+position = Vector2(29757, -215)
+script = ExtResource("21_u440q")
+
+[node name="Vines" type="Sprite2D" parent="FirstDoor5" unique_id=1553191511]
+texture_repeat = 3
+position = Vector2(1.9999999, 99)
+scale = Vector2(0.835, 0.835)
+texture = ExtResource("22_p02il")
+region_rect = Rect2(195.257, 114.326, 209.366, 412.061)
+
+[node name="Vines2" type="Sprite2D" parent="FirstDoor5" unique_id=1702277725]
+texture_repeat = 3
+position = Vector2(1.9999999, -174.99997)
+scale = Vector2(0.835, 0.835)
+texture = ExtResource("22_p02il")
+region_rect = Rect2(195.257, 114.326, 209.366, 412.061)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FirstDoor5" unique_id=1193619476]
+shape = SubResource("RectangleShape2D_q7yup")
+
 [node name="BoogerCatcher" type="Area2D" parent="." unique_id=823190304]
 position = Vector2(22741, -1382)
 script = ExtResource("23_6bsd4")
@@ -364,7 +385,7 @@ shape = SubResource("RectangleShape2D_3kj8n")
 [node name="Button2" type="Area2D" parent="." unique_id=765392588]
 position = Vector2(27956, -216)
 script = ExtResource("17_66cxk")
-doorObj = "FirstDoor3"
+doorObj = "FirstDoor5"
 
 [node name="Icon" type="Node2D" parent="Button2" unique_id=1370079735]
 scale = Vector2(0.66, 0.66)
@@ -387,7 +408,7 @@ shape = SubResource("RectangleShape2D_3kj8n")
 [node name="Button3" type="Area2D" parent="." unique_id=1102062192]
 position = Vector2(29381, -1141)
 script = ExtResource("17_66cxk")
-doorObj = "FirstDoor3"
+doorObj = "FirstDoor4"
 
 [node name="Icon" type="Node2D" parent="Button3" unique_id=1548092394]
 scale = Vector2(0.66, 0.66)
@@ -427,29 +448,6 @@ shape = SubResource("RectangleShape2D_eo4fi")
 position = Vector2(0, 33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button4/StaticBody2D" unique_id=1650841828]
-position = Vector2(0, 16)
-shape = SubResource("RectangleShape2D_3kj8n")
-
-[node name="Button5" type="Area2D" parent="." unique_id=1049813873]
-position = Vector2(30357, -1146)
-script = ExtResource("17_66cxk")
-doorObj = "FirstDoor3"
-
-[node name="Icon" type="Node2D" parent="Button5" unique_id=1690900810]
-scale = Vector2(0.66, 0.66)
-
-[node name="BUtton" type="Sprite2D" parent="Button5/Icon" unique_id=915777276]
-position = Vector2(-6.060606, -19.69697)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("18_582bu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button5" unique_id=1190148290]
-shape = SubResource("RectangleShape2D_eo4fi")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Button5" unique_id=830161333]
-position = Vector2(0, 33)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button5/StaticBody2D" unique_id=1933281501]
 position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_3kj8n")
 
@@ -573,6 +571,13 @@ scale = Vector2(15, 5)
 [node name="StaticBody2D36" parent="." unique_id=1741488803 instance=ExtResource("6_keoi2")]
 position = Vector2(30031.002, -780)
 scale = Vector2(15, 5)
+
+[node name="StaticBody2D39" parent="." unique_id=2011767173 instance=ExtResource("6_keoi2")]
+position = Vector2(29658.002, 254)
+scale = Vector2(15, 5)
+
+[node name="StaticBody2D40" parent="." unique_id=1174657791 instance=ExtResource("6_keoi2")]
+position = Vector2(28998, -798)
 
 [node name="StaticBody2D37" parent="." unique_id=961819451 instance=ExtResource("6_keoi2")]
 position = Vector2(30021.002, -1938)
@@ -1215,7 +1220,5 @@ position = Vector2(26509, -915)
 [connection signal="body_exited" from="Button3" to="Button3" method="_on_body_exited"]
 [connection signal="body_entered" from="Button4" to="Button4" method="_on_body_entered"]
 [connection signal="body_exited" from="Button4" to="Button4" method="_on_body_exited"]
-[connection signal="body_entered" from="Button5" to="Button5" method="_on_body_entered"]
-[connection signal="body_exited" from="Button5" to="Button5" method="_on_body_exited"]
 [connection signal="body_entered" from="Checkpoint" to="Checkpoint" method="_on_body_entered"]
 [connection signal="body_entered" from="Checkpoint2" to="Checkpoint2" method="_on_body_entered"]
