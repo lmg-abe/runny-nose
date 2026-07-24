@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://cio2soswu0h6c" path="res://snot_monster.tscn" id="26_p02il"]
 [ext_resource type="PackedScene" uid="uid://58gwltlc3vcu" path="res://hand_npc.tscn" id="28_q7yup"]
 [ext_resource type="Texture2D" uid="uid://basc5ut81shal" path="res://crate.png" id="29_582bu"]
+[ext_resource type="PackedScene" uid="uid://dqm5cpuwo6jsg" path="res://ear_npc.tscn" id="31_7uh3c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qacl"]
 size = Vector2(200000, 1024)
@@ -515,6 +516,14 @@ scale = Vector2(3, 1)
 [node name="StaticBody2D16" parent="." unique_id=647116815 instance=ExtResource("6_keoi2")]
 position = Vector2(15384.001, -203.99997)
 scale = Vector2(3, 5)
+
+[node name="StaticBody2D44" parent="." unique_id=267781779 instance=ExtResource("6_keoi2")]
+position = Vector2(32371, -386.9999)
+scale = Vector2(3, 5)
+
+[node name="StaticBody2D45" parent="." unique_id=760893983 instance=ExtResource("6_keoi2")]
+position = Vector2(33959, -562)
+scale = Vector2(3, 10)
 
 [node name="StaticBody2D24" parent="." unique_id=1528973272 instance=ExtResource("6_keoi2")]
 position = Vector2(15786.001, 92.00003)
@@ -1219,6 +1228,9 @@ shape = SubResource("RectangleShape2D_vcylt")
 
 [node name="SnotMonster" parent="." unique_id=1945784672 instance=ExtResource("26_p02il")]
 position = Vector2(26509, -915)
+
+[node name="ear_npc" parent="." unique_id=1919946528 instance=ExtResource("31_7uh3c")]
+position = Vector2(31756, -218)
 
 [connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]
 [connection signal="body_entered" from="BoogerCatcher" to="BoogerCatcher" method="_on_body_entered"]
