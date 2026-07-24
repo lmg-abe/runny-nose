@@ -82,7 +82,7 @@ func _physics_process(delta: float) -> void:
 	# move HandArea to the side the player is facing
 	get_node("HandArea").position = Vector2(150*facingDirection,60)
 	# pick up boxes
-	if Input.is_action_just_pressed("pick_up") and not holdingThing:
+	if Input.is_action_just_pressed("pick_up") and not holdingThing and Global.got_hand:
 		var stuffInHandArea = get_node("HandArea").get_overlapping_bodies()
 		for body in stuffInHandArea:
 			if body is RigidBody2D:
@@ -108,7 +108,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor() :
 		canSneeze = true
 		canDash = true
-	if canDash and Input.is_action_just_pressed("dash") and not holdingThing and dashTimer==-1:
+	if canDash and Input.is_action_just_pressed("dash") and not holdingThing and dashTimer==-1 and Global.got_ear:
 		velocity.x+=Input.get_axis("move_left","move_right")*dashSpeed
 		dashTimer=10
 		if velocity.y > 0 :

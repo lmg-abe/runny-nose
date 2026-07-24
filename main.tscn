@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://kkyiuw4k8h5a" path="res://goop.tscn" id="11_efxa6"]
 [ext_resource type="PackedScene" uid="uid://32q6niro3beh" path="res://bubble.tscn" id="12_dg77c"]
 [ext_resource type="PackedScene" uid="uid://dx3ma57wvrfwy" path="res://basic_enemy.tscn" id="13_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://58gwltlc3vcu" path="res://hand_npc.tscn" id="16_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://dqm5cpuwo6jsg" path="res://ear_npc.tscn" id="17_yaehf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_frgu1"]
 size = Vector2(128, 512)
@@ -271,6 +273,12 @@ position = Vector2(4804, -790)
 
 [node name="BasicEnemy" parent="." unique_id=641976464 instance=ExtResource("13_ycdy4")]
 position = Vector2(6784, -351)
+
+[node name="HandNPC" parent="." unique_id=434802834 instance=ExtResource("16_2cqfq")]
+position = Vector2(3662, -358)
+
+[node name="ear_npc" parent="." unique_id=1212801115 instance=ExtResource("17_yaehf")]
+position = Vector2(2102, -596)
 
 [connection signal="body_entered" from="Button" to="Button" method="_on_body_entered"]
 [connection signal="body_exited" from="Button" to="Button" method="_on_body_exited"]
