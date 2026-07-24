@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cio2soswu0h6c"]
+
+[ext_resource type="Script" uid="uid://vqp483mcdekf" path="res://snot_monster.gd" id="1_l52fp"]
+[ext_resource type="PackedScene" uid="uid://d13bdua4v0bbg" path="res://damage_hitbox.tscn" id="2_6bpaj"]
+[ext_resource type="Texture2D" uid="uid://c20v0cliu4peo" path="res://the_snot_monster.png" id="2_l52fp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_frgu1"]
+radius = 64.0
+height = 217.47
+
+[node name="SnotMonster" type="CharacterBody2D" unique_id=641976464]
+script = ExtResource("1_l52fp")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1692501021]
+position = Vector2(9, 18)
+texture = ExtResource("2_l52fp")
+flip_h = true
+
+[node name="DamageHitbox" parent="." unique_id=1883985547 instance=ExtResource("2_6bpaj")]
+position = Vector2(1, 17)
+scale = Vector2(1.5952835, 0.98932433)
+collision_layer = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1194070333]
+position = Vector2(2, 17)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_frgu1")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1016366439]
+target_position = Vector2(120, 0)
+collision_mask = 3
