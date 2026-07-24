@@ -25,10 +25,13 @@ var holdingThing : bool = false
 var box
 var movementMultiplier : float = 1
 var idleAnimTimer : int = 0
+var wasAirborne : bool = false
 
 func _ready() -> void:
 	Global.update_goops.connect(_on_update_goops)
 	Global.update_bubbles.connect(_on_update_bubbles)
+	if Global.deaths>0:
+		get_node("death").play()
 
 func _on_update_goops() :
 	canSneeze = true
@@ -108,26 +111,31 @@ func _physics_process(delta: float) -> void:
 		if velocity.y > 0 :
 			velocity.y = 0
 		canDash = false
+		get_node("dash").play()
 	if !Input.is_action_pressed("jump") or is_on_floor() or jumpTimer > jumpRiseTime:
 		jumpTimer=-1
 	if Input.is_action_just_pressed("jump") and is_on_floor() and not holdingThing:
 		jumpTimer+=1
+		get_node("jump").play()
 	if jumpTimer>-1:
 		velocity.y=-jumpSpeed
 		jumpTimer+=1
+	if wasAirborne and is_on_floor():
+		get_node("landing").play()
 		
 	if canSneeze and Input.is_action_just_pressed("sneeze") and not holdingThing:
 		if velocity.y > 0 :
 			velocity.y = 0
 		velocity.y -= secondJumpSpeed
 		canSneeze = false
+		get_node("sneeze").play()
 	if velocity.y < maxRise :
 		velocity.y = maxRise
 	velocity.y += gravity
+	wasAirborne = not is_on_floor()
 	move_and_slide()
 	#if move_and_slide(): # true if collided
 		#for i in get_slide_collision_count():
 			#var col = get_slide_collision(i)
 			#if col.get_collider() is RigidBody2D:
 				#col.get_collider().apply_force(col.get_normal() * -pushForce)
-	

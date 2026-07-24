@@ -7,6 +7,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Runny":
 		Global.collectables+=amount
 		Global.update_collectables.emit()
+		get_parent().get_node("Runny").get_node("collect").play()
 		queue_free()
 
 func _process(delta: float) -> void:
