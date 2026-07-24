@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bxreok8v3rk8d" path="res://collectable.tscn" id="7_nboye"]
 [ext_resource type="PackedScene" uid="uid://dx3ma57wvrfwy" path="res://basic_enemy.tscn" id="8_d5i42"]
 [ext_resource type="Texture2D" uid="uid://bxurp8851yn4l" path="res://grass.png" id="11_gjxye"]
+[ext_resource type="AudioStream" uid="uid://coq2o4d87r31g" path="res://area_1_music.wav" id="12_hur56"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qacl"]
 size = Vector2(200000, 1024)
@@ -326,5 +327,9 @@ position = Vector2(9057, -1038)
 
 [node name="BasicEnemy" parent="." unique_id=641976464 instance=ExtResource("8_d5i42")]
 position = Vector2(8728, -664)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=174514885]
+stream = ExtResource("12_hur56")
+autoplay = true
 
 [connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]
