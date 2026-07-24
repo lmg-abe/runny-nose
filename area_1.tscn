@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://b7cdx4gvm0e5x" path="res://booger_catcher_booger.png" id="25_582bu"]
 [ext_resource type="PackedScene" uid="uid://cio2soswu0h6c" path="res://snot_monster.tscn" id="26_p02il"]
 [ext_resource type="PackedScene" uid="uid://58gwltlc3vcu" path="res://hand_npc.tscn" id="28_q7yup"]
+[ext_resource type="Script" uid="uid://dsrbe2kyrsg63" path="res://end.gd" id="28_vcylt"]
 [ext_resource type="Texture2D" uid="uid://basc5ut81shal" path="res://crate.png" id="29_582bu"]
 [ext_resource type="PackedScene" uid="uid://dqm5cpuwo6jsg" path="res://ear_npc.tscn" id="31_7uh3c"]
 
@@ -251,7 +252,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sign3" type="Sprite2D" parent="." unique_id=915605236]
-position = Vector2(33207, -222)
+position = Vector2(33260, -181.00002)
 scale = Vector2(0.5088785, 0.5088786)
 texture = ExtResource("9_2562f")
 
@@ -677,7 +678,7 @@ position = Vector2(31569.002, 250)
 scale = Vector2(15, 5)
 
 [node name="StaticBody2D42" parent="." unique_id=136204333 instance=ExtResource("6_keoi2")]
-position = Vector2(33496.004, 207)
+position = Vector2(33496.004, 250)
 scale = Vector2(15, 5)
 
 [node name="StaticBody2D46" parent="." unique_id=1058050671 instance=ExtResource("6_keoi2")]
@@ -924,10 +925,10 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect28" type="NinePatchRect" parent="." unique_id=1215554978]
-offset_left = 28665.0
-offset_top = -122.0
-offset_right = 34495.0
-offset_bottom = 1964.0
+offset_left = 28622.0
+offset_top = -116.0
+offset_right = 34452.0
+offset_bottom = 1970.0
 texture = ExtResource("11_gjxye")
 region_rect = Rect2(188, 208, 208, 240)
 patch_margin_left = 32
@@ -970,6 +971,62 @@ offset_left = 29041.0
 offset_top = -1161.0
 offset_right = 31030.0
 offset_bottom = -393.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect38" type="NinePatchRect" parent="." unique_id=1256685021]
+offset_left = 32137.0
+offset_top = -760.0
+offset_right = 32610.0
+offset_bottom = 8.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect39" type="NinePatchRect" parent="." unique_id=71393846]
+offset_left = 34040.0
+offset_top = -1323.0
+offset_right = 34513.0
+offset_bottom = 1039.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect40" type="NinePatchRect" parent="." unique_id=931844126]
+offset_left = 35473.0
+offset_top = -4823.0
+offset_right = 37460.0
+offset_bottom = -828.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect41" type="NinePatchRect" parent="." unique_id=1106734679]
+offset_left = 36292.0
+offset_top = -248.0
+offset_right = 38312.0
+offset_bottom = 3747.0
 texture = ExtResource("11_gjxye")
 region_rect = Rect2(188, 208, 208, 240)
 patch_margin_left = 32
@@ -1302,7 +1359,7 @@ position = Vector2(22161, -62)
 texture = ExtResource("14_r73l4")
 
 [node name="Spikes15" type="Sprite2D" parent="." unique_id=1693568238]
-position = Vector2(27712, -1372)
+position = Vector2(27728, -1391)
 texture = ExtResource("14_r73l4")
 
 [node name="Runny" parent="." unique_id=1298635211 instance=ExtResource("3_nboye")]
@@ -1397,6 +1454,72 @@ position = Vector2(21715, -1097)
 [node name="Collectable29" parent="." unique_id=1565722374 instance=ExtResource("7_nboye")]
 position = Vector2(21247, -991)
 
+[node name="Collectable30" parent="." unique_id=585028150 instance=ExtResource("7_nboye")]
+position = Vector2(27341, -1641)
+
+[node name="Collectable31" parent="." unique_id=1413063707 instance=ExtResource("7_nboye")]
+position = Vector2(27758, -1824)
+
+[node name="Collectable32" parent="." unique_id=1978532323 instance=ExtResource("7_nboye")]
+position = Vector2(28121, -1664)
+
+[node name="Collectable33" parent="." unique_id=2003226062 instance=ExtResource("7_nboye")]
+position = Vector2(28888, -1422)
+
+[node name="Collectable34" parent="." unique_id=1426981967 instance=ExtResource("7_nboye")]
+position = Vector2(28805, -1028)
+
+[node name="Collectable35" parent="." unique_id=1186523862 instance=ExtResource("7_nboye")]
+position = Vector2(28957, -605)
+
+[node name="Collectable36" parent="." unique_id=169321713 instance=ExtResource("7_nboye")]
+position = Vector2(27736, -411)
+
+[node name="Collectable37" parent="." unique_id=1798127900 instance=ExtResource("7_nboye")]
+position = Vector2(30205, -1366)
+
+[node name="Collectable38" parent="." unique_id=911258975 instance=ExtResource("7_nboye")]
+position = Vector2(29546, -263)
+
+[node name="Collectable39" parent="." unique_id=679482783 instance=ExtResource("7_nboye")]
+position = Vector2(30629, -256)
+
+[node name="Collectable40" parent="." unique_id=866499132 instance=ExtResource("7_nboye")]
+position = Vector2(30212, -263)
+
+[node name="Collectable41" parent="." unique_id=689906654 instance=ExtResource("7_nboye")]
+position = Vector2(32385, -916)
+
+[node name="Collectable42" parent="." unique_id=638353624 instance=ExtResource("7_nboye")]
+position = Vector2(32838, -1088)
+
+[node name="Collectable43" parent="." unique_id=542282426 instance=ExtResource("7_nboye")]
+position = Vector2(33413, -1022)
+
+[node name="Collectable44" parent="." unique_id=735948520 instance=ExtResource("7_nboye")]
+position = Vector2(34285, -1435)
+
+[node name="Collectable45" parent="." unique_id=9034139 instance=ExtResource("7_nboye")]
+position = Vector2(33783, -968)
+
+[node name="Collectable46" parent="." unique_id=54959039 instance=ExtResource("7_nboye")]
+position = Vector2(34984, -1418)
+
+[node name="Collectable47" parent="." unique_id=275563868 instance=ExtResource("7_nboye")]
+position = Vector2(34998, -286)
+
+[node name="Collectable48" parent="." unique_id=1834977418 instance=ExtResource("7_nboye")]
+position = Vector2(35526, -569)
+
+[node name="Collectable49" parent="." unique_id=4557505 instance=ExtResource("7_nboye")]
+position = Vector2(35878, -566)
+
+[node name="Collectable50" parent="." unique_id=648897288 instance=ExtResource("7_nboye")]
+position = Vector2(36399, -552)
+
+[node name="Collectable51" parent="." unique_id=759796207 instance=ExtResource("7_nboye")]
+position = Vector2(34984, -873)
+
 [node name="BasicEnemy" parent="." unique_id=641976464 instance=ExtResource("8_d5i42")]
 position = Vector2(8728, -664)
 
@@ -1433,6 +1556,23 @@ checkpointID = 2
 position = Vector2(-142, 0)
 shape = SubResource("RectangleShape2D_frgu1")
 
+[node name="Checkpoint3" type="Area2D" parent="." unique_id=1114827043]
+position = Vector2(31499, 408)
+script = ExtResource("15_th8es")
+checkpointID = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint3" unique_id=910901563]
+position = Vector2(-142, 0)
+shape = SubResource("RectangleShape2D_frgu1")
+
+[node name="END" type="Area2D" parent="." unique_id=1575336812]
+position = Vector2(37496, 262)
+script = ExtResource("28_vcylt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="END" unique_id=180817117]
+position = Vector2(-142, 0)
+shape = SubResource("RectangleShape2D_frgu1")
+
 [node name="DamageHitbox" parent="." unique_id=1883985547 instance=ExtResource("16_ayu7x")]
 position = Vector2(18527, 3)
 scale = Vector2(20, 1)
@@ -1442,7 +1582,7 @@ position = Vector2(21073, -12)
 scale = Vector2(20, 1)
 
 [node name="DamageHitbox3" parent="." unique_id=454016686 instance=ExtResource("16_ayu7x")]
-position = Vector2(27714.002, -1330)
+position = Vector2(27729, -1345)
 scale = Vector2(2.3999996, 1)
 
 [node name="HandNPC" parent="." unique_id=434802834 instance=ExtResource("28_q7yup")]
@@ -1506,3 +1646,5 @@ position = Vector2(31756, -218)
 [connection signal="body_exited" from="Button4" to="Button4" method="_on_body_exited"]
 [connection signal="body_entered" from="Checkpoint" to="Checkpoint" method="_on_body_entered"]
 [connection signal="body_entered" from="Checkpoint2" to="Checkpoint2" method="_on_body_entered"]
+[connection signal="body_entered" from="Checkpoint3" to="Checkpoint3" method="_on_body_entered"]
+[connection signal="body_entered" from="END" to="END" method="_on_body_entered"]
