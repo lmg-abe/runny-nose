@@ -181,6 +181,26 @@ texture = ExtResource("4_lx7ru")
 position = Vector2(21237, -1360)
 texture = ExtResource("5_r2afo")
 
+[node name="BgBush3" type="Sprite2D" parent="BgTree" unique_id=2048313434]
+position = Vector2(22762, -1113)
+texture = ExtResource("7_rulab")
+
+[node name="BgFallenLog7" type="Sprite2D" parent="BgTree" unique_id=401804390]
+position = Vector2(22318, -1357)
+texture = ExtResource("6_q5abr")
+
+[node name="BgMushroom7" type="Sprite2D" parent="BgTree" unique_id=1076180779]
+position = Vector2(23667, -1057)
+texture = ExtResource("8_r73l4")
+
+[node name="BgStump7" type="Sprite2D" parent="BgTree" unique_id=1044297089]
+position = Vector2(24492, -839)
+texture = ExtResource("5_r2afo")
+
+[node name="BgTree7" type="Sprite2D" parent="BgTree" unique_id=2012094098]
+position = Vector2(27295, -1556)
+texture = ExtResource("4_lx7ru")
+
 [node name="DeathPlane" type="Area2D" parent="." unique_id=883156438]
 position = Vector2(122, 1749)
 script = ExtResource("2_keoi2")
@@ -633,7 +653,6 @@ position = Vector2(-193, -255)
 scale = Vector2(1, 11.905)
 
 [node name="NinePatchRect6" type="NinePatchRect" parent="." unique_id=2097562094]
-visible = false
 offset_left = 3513.0
 offset_top = 83.0
 offset_right = 20103.0
@@ -648,7 +667,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect12" type="NinePatchRect" parent="." unique_id=1231929452]
-visible = false
 offset_left = 9196.0
 offset_top = -293.0
 offset_right = 10239.0
@@ -663,7 +681,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect14" type="NinePatchRect" parent="." unique_id=681252138]
-visible = false
 offset_left = 13304.0
 offset_top = -70.0
 offset_right = 24023.0
@@ -678,7 +695,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect13" type="NinePatchRect" parent="." unique_id=1317348302]
-visible = false
 offset_left = 12496.0
 offset_top = -562.0
 offset_right = 13713.0
@@ -693,7 +709,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect15" type="NinePatchRect" parent="." unique_id=876109394]
-visible = false
 offset_left = 15150.0
 offset_top = -586.0
 offset_right = 15611.0
@@ -708,7 +723,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect16" type="NinePatchRect" parent="." unique_id=1792953192]
-visible = false
 offset_left = 15946.0
 offset_top = -1222.0
 offset_right = 16407.0
@@ -723,7 +737,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect18" type="NinePatchRect" parent="." unique_id=712116588]
-visible = false
 offset_left = 16839.0
 offset_top = -579.0
 offset_right = 17300.0
@@ -738,7 +751,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect19" type="NinePatchRect" parent="." unique_id=1014083098]
-visible = false
 offset_left = 18108.0
 offset_top = -579.0
 offset_right = 18569.0
@@ -752,8 +764,21 @@ patch_margin_bottom = 48
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[node name="NinePatchRect35" type="NinePatchRect" parent="." unique_id=1635390245]
+offset_left = 30691.0
+offset_top = -1914.0
+offset_right = 31030.0
+offset_bottom = -393.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
 [node name="NinePatchRect20" type="NinePatchRect" parent="." unique_id=2122889115]
-visible = false
 offset_left = 19764.0
 offset_top = -585.0
 offset_right = 20225.0
@@ -768,7 +793,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect21" type="NinePatchRect" parent="." unique_id=724586908]
-visible = false
 offset_left = 22293.0
 offset_top = -1395.0
 offset_right = 23662.0
@@ -782,8 +806,175 @@ patch_margin_bottom = 48
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[node name="NinePatchRect25" type="NinePatchRect" parent="." unique_id=999519719]
+offset_left = 23543.0
+offset_top = -1101.0
+offset_right = 25569.0
+offset_bottom = 985.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect26" type="NinePatchRect" parent="." unique_id=1313976956]
+offset_left = 25495.0
+offset_top = -874.0
+offset_right = 27483.0
+offset_bottom = 1212.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect27" type="NinePatchRect" parent="." unique_id=2005453469]
+offset_left = 26735.0
+offset_top = -238.0
+offset_right = 28723.0
+offset_bottom = 1848.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect28" type="NinePatchRect" parent="." unique_id=1215554978]
+offset_left = 28665.0
+offset_top = -122.0
+offset_right = 34495.0
+offset_bottom = 1964.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect29" type="NinePatchRect" parent="." unique_id=2131232566]
+offset_left = 26740.0
+offset_top = -1393.0
+offset_right = 28729.0
+offset_bottom = -625.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect30" type="NinePatchRect" parent="." unique_id=26855187]
+offset_left = 29033.0
+offset_top = -2329.0
+offset_right = 31022.0
+offset_bottom = -1561.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect34" type="NinePatchRect" parent="." unique_id=81930204]
+offset_left = 29041.0
+offset_top = -1161.0
+offset_right = 31030.0
+offset_bottom = -393.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect36" type="NinePatchRect" parent="." unique_id=1026957907]
+offset_left = 28923.0
+offset_top = -1162.0
+offset_right = 29093.0
+offset_bottom = -922.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect37" type="NinePatchRect" parent="." unique_id=1392042678]
+offset_left = 28691.0
+offset_top = -866.0
+offset_right = 28861.0
+offset_bottom = -626.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect32" type="NinePatchRect" parent="." unique_id=2050557331]
+offset_left = 25504.0
+offset_top = -4346.0
+offset_right = 27493.0
+offset_bottom = -1838.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect33" type="NinePatchRect" parent="." unique_id=2018479455]
+offset_left = 23615.0
+offset_top = -4705.0
+offset_right = 25604.0
+offset_bottom = -2197.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="NinePatchRect31" type="NinePatchRect" parent="." unique_id=1548625164]
+offset_left = 27432.0
+offset_top = -4873.0
+offset_right = 31456.0
+offset_bottom = -2192.0
+texture = ExtResource("11_gjxye")
+region_rect = Rect2(188, 208, 208, 240)
+patch_margin_left = 32
+patch_margin_top = 48
+patch_margin_right = 32
+patch_margin_bottom = 48
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
 [node name="NinePatchRect22" type="NinePatchRect" parent="." unique_id=849857650]
-visible = false
 offset_left = 22318.0
 offset_top = -3921.0
 offset_right = 23687.0
@@ -798,7 +989,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect17" type="NinePatchRect" parent="." unique_id=1160223059]
-visible = false
 offset_left = 15453.0
 offset_top = -296.0
 offset_right = 16059.0
@@ -813,7 +1003,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect9" type="NinePatchRect" parent="." unique_id=519679433]
-visible = false
 offset_left = 7610.0
 offset_top = -763.0
 offset_right = 8184.0
@@ -828,7 +1017,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect11" type="NinePatchRect" parent="." unique_id=1784385158]
-visible = false
 offset_left = 9280.0
 offset_top = -766.0
 offset_right = 9854.0
@@ -843,7 +1031,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect10" type="NinePatchRect" parent="." unique_id=1281158524]
-visible = false
 offset_left = 8134.0
 offset_top = -636.0
 offset_right = 9326.0
@@ -858,7 +1045,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect7" type="NinePatchRect" parent="." unique_id=1614676304]
-visible = false
 offset_left = 5513.0
 offset_top = -454.0
 offset_right = 5946.0
@@ -873,7 +1059,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect23" type="NinePatchRect" parent="." unique_id=1441622813]
-visible = false
 offset_left = 20790.0
 offset_top = -493.0
 offset_right = 21223.0
@@ -888,7 +1073,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect24" type="NinePatchRect" parent="." unique_id=82264796]
-visible = false
 offset_left = 21510.0
 offset_top = -988.0
 offset_right = 21943.0
@@ -903,7 +1087,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect8" type="NinePatchRect" parent="." unique_id=1391374675]
-visible = false
 offset_left = 6598.0
 offset_top = -558.0
 offset_right = 7031.0
@@ -918,7 +1101,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="." unique_id=1139790082]
-visible = false
 offset_left = 2167.0
 offset_top = 22.0
 offset_right = 2743.0
@@ -933,7 +1115,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect4" type="NinePatchRect" parent="." unique_id=470678578]
-visible = false
 offset_left = 3435.0
 offset_top = -108.0
 offset_right = 4125.0
@@ -948,7 +1129,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect3" type="NinePatchRect" parent="." unique_id=2058014100]
-visible = false
 offset_left = 2676.0
 offset_top = -240.0
 offset_right = 3492.0
@@ -963,7 +1143,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect5" type="NinePatchRect" parent="." unique_id=470893135]
-visible = false
 offset_left = 4077.0
 offset_top = -237.0
 offset_right = 4893.0
@@ -978,7 +1157,6 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1791251047]
-visible = false
 offset_left = -151.0
 offset_top = 148.0
 offset_right = 2237.0
@@ -1046,6 +1224,10 @@ texture = ExtResource("14_r73l4")
 
 [node name="Spikes14" type="Sprite2D" parent="." unique_id=1242716679]
 position = Vector2(22161, -62)
+texture = ExtResource("14_r73l4")
+
+[node name="Spikes15" type="Sprite2D" parent="." unique_id=1693568238]
+position = Vector2(27712, -1372)
 texture = ExtResource("14_r73l4")
 
 [node name="Runny" parent="." unique_id=1298635211 instance=ExtResource("3_nboye")]
@@ -1183,6 +1365,10 @@ scale = Vector2(20, 1)
 [node name="DamageHitbox2" parent="." unique_id=178684260 instance=ExtResource("16_ayu7x")]
 position = Vector2(21073, -12)
 scale = Vector2(20, 1)
+
+[node name="DamageHitbox3" parent="." unique_id=454016686 instance=ExtResource("16_ayu7x")]
+position = Vector2(27714.002, -1330)
+scale = Vector2(2.3999996, 1)
 
 [node name="HandNPC" parent="." unique_id=434802834 instance=ExtResource("28_q7yup")]
 position = Vector2(24561, -1199)
