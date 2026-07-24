@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b54wo2levf2yf" path="res://paper.jpg" id="1_mae5d"]
 [ext_resource type="Script" uid="uid://brp6xv3rsik7w" path="res://play.gd" id="2_mae5d"]
+[ext_resource type="Script" uid="uid://dy1ce55vtom8u" path="res://quit.gd" id="3_4hy44"]
 [ext_resource type="Texture2D" uid="uid://q414oq2hgscb" path="res://logo.png" id="3_mae5d"]
 
 [node name="Credits" type="Control" unique_id=1457157402]
@@ -49,9 +50,17 @@ theme_override_font_sizes/font_size = 24
 text = "Play!"
 script = ExtResource("2_mae5d")
 
+[node name="Button2" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=195264997]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "quit :("
+script = ExtResource("3_4hy44")
+
 [node name="Logo" type="Sprite2D" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1998918623]
 position = Vector2(207, -146)
 scale = Vector2(0.11779776, 0.11779776)
 texture = ExtResource("3_mae5d")
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Button" to="MarginContainer/CenterContainer/VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Button2" to="MarginContainer/CenterContainer/VBoxContainer/Button" method="_on_button_2_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Button2" to="MarginContainer/CenterContainer/VBoxContainer/Button2" method="_on_pressed"]
