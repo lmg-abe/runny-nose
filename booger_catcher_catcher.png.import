@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duqjqb0lr3uw"
-path="res://.godot/imported/booger_catcher.png-5ddd94e88007eab9e025dcdde52c89bd.ctex"
+uid="uid://u01vfwx607of"
+path="res://.godot/imported/booger_catcher_catcher.png-4457709287ea0a6b01ab88c9539d4c6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://booger_catcher.png"
-dest_files=["res://.godot/imported/booger_catcher.png-5ddd94e88007eab9e025dcdde52c89bd.ctex"]
+source_file="res://booger_catcher_catcher.png"
+dest_files=["res://.godot/imported/booger_catcher_catcher.png-4457709287ea0a6b01ab88c9539d4c6d.ctex"]
 
 [params]
 

@@ -35,6 +35,8 @@ func _ready() -> void:
 		get_node("death").play()
 		Global.collectables=0
 		Global.update_collectables.emit()
+	if Global.lastCheckpoint!=0:
+		position=Global.checkpointPos
 
 func _on_update_goops() :
 	canSneeze = true
@@ -91,7 +93,8 @@ func _physics_process(delta: float) -> void:
 				body.position = Vector2(0,-200)
 				holdingThing = true
 				box = body
-				
+	
+	#print(position.x)			
 	
 	if holdingThing:
 		movementMultiplier=.5

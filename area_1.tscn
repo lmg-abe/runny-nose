@@ -14,9 +14,13 @@
 [ext_resource type="PackedScene" uid="uid://dx3ma57wvrfwy" path="res://basic_enemy.tscn" id="8_d5i42"]
 [ext_resource type="Texture2D" uid="uid://bxurp8851yn4l" path="res://grass.png" id="11_gjxye"]
 [ext_resource type="AudioStream" uid="uid://coq2o4d87r31g" path="res://area_1_music.wav" id="12_hur56"]
+[ext_resource type="Script" uid="uid://ckgwqyfdgxcm2" path="res://checkpoint.gd" id="15_th8es"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qacl"]
 size = Vector2(200000, 1024)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frgu1"]
+size = Vector2(128, 2000000)
 
 [node name="Area 1" type="Node2D" unique_id=1738656535]
 
@@ -342,4 +346,13 @@ position = Vector2(8728, -664)
 stream = ExtResource("12_hur56")
 autoplay = true
 
+[node name="Checkpoint" type="Area2D" parent="." unique_id=882051576]
+position = Vector2(8032, -952)
+script = ExtResource("15_th8es")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint" unique_id=1388971627]
+position = Vector2(-142, 0)
+shape = SubResource("RectangleShape2D_frgu1")
+
 [connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]
+[connection signal="body_entered" from="Checkpoint" to="Checkpoint" method="_on_body_entered"]

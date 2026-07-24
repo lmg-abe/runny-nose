@@ -8,7 +8,10 @@
 [ext_resource type="Script" uid="uid://5it2uxyvfgis" path="res://cameraFollow.gd" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://ckdonj4jvyx3n" path="res://button.png" id="5_vivmo"]
 [ext_resource type="Script" uid="uid://dl2ulel2qbav1" path="res://death_plane.gd" id="6_7mycd"]
+[ext_resource type="Texture2D" uid="uid://u01vfwx607of" path="res://booger_catcher_catcher.png" id="6_074og"]
+[ext_resource type="Script" uid="uid://c8w3pedd53h53" path="res://booger_catcher.gd" id="6_82xsv"]
 [ext_resource type="Script" uid="uid://cpqs4s4ixphnm" path="res://death_counter.gd" id="7_272bh"]
+[ext_resource type="Texture2D" uid="uid://b7cdx4gvm0e5x" path="res://booger_catcher_booger.png" id="7_cegan"]
 [ext_resource type="Texture2D" uid="uid://basc5ut81shal" path="res://crate.png" id="7_w48qg"]
 [ext_resource type="PackedScene" uid="uid://bxreok8v3rk8d" path="res://collectable.tscn" id="9_kek77"]
 [ext_resource type="Script" uid="uid://bua7vcu78n8th" path="res://collectable_counter.gd" id="10_4c57u"]
@@ -25,7 +28,7 @@ size = Vector2(128, 512)
 size = Vector2(128, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3kj8n"]
-size = Vector2(128, 32)
+size = Vector2(100, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
 size = Vector2(128, 128)
@@ -122,26 +125,28 @@ region_rect = Rect2(195.257, 114.326, 209.366, 412.061)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door2" unique_id=455882740]
 shape = SubResource("RectangleShape2D_frgu1")
 
-[node name="Button2" type="Area2D" parent="." unique_id=1976736023]
+[node name="BoogerCatcher" type="Area2D" parent="." unique_id=1976736023]
 position = Vector2(8223, -236)
-script = ExtResource("3_5vw27")
+script = ExtResource("6_82xsv")
 doorObj = "Door2"
 
-[node name="Icon" type="Node2D" parent="Button2" unique_id=1437207913]
-scale = Vector2(0.66, 0.66)
+[node name="Icon" type="Sprite2D" parent="BoogerCatcher" unique_id=1202796682]
+position = Vector2(0, -10.025)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_074og")
 
-[node name="BUtton" type="Sprite2D" parent="Button2/Icon" unique_id=648721724]
-position = Vector2(-6.060606, -19.69697)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("5_vivmo")
+[node name="Icon_Booger" type="Sprite2D" parent="BoogerCatcher/Icon" unique_id=2068564357]
+visible = false
+position = Vector2(6, -27.950012)
+texture = ExtResource("7_cegan")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button2" unique_id=1282630947]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoogerCatcher" unique_id=1282630947]
 shape = SubResource("RectangleShape2D_eo4fi")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Button2" unique_id=440133789]
+[node name="StaticBody2D" type="StaticBody2D" parent="BoogerCatcher" unique_id=440133789]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Button2/StaticBody2D" unique_id=1665709876]
-position = Vector2(0, 16)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoogerCatcher/StaticBody2D" unique_id=1665709876]
+position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_3kj8n")
 
 [node name="Floor9" parent="." unique_id=49349976 instance=ExtResource("1_h2yge")]
@@ -282,6 +287,6 @@ position = Vector2(2102, -596)
 
 [connection signal="body_entered" from="Button" to="Button" method="_on_body_entered"]
 [connection signal="body_exited" from="Button" to="Button" method="_on_body_exited"]
-[connection signal="body_entered" from="Button2" to="Button2" method="_on_body_entered"]
-[connection signal="body_exited" from="Button2" to="Button2" method="_on_body_exited"]
+[connection signal="body_entered" from="BoogerCatcher" to="BoogerCatcher" method="_on_body_entered"]
+[connection signal="body_exited" from="BoogerCatcher" to="BoogerCatcher" method="_on_body_exited"]
 [connection signal="body_entered" from="DeathPlane" to="DeathPlane" method="_on_body_entered"]

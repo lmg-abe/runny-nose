@@ -8,6 +8,9 @@ signal died
 var got_hand : bool = false
 var got_ear : bool = false
 
+var lastCheckpoint : int = 0
+var checkpointPos : Vector2
+
 signal update_collectables
 
 var goops : int = 0

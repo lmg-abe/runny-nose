@@ -16,4 +16,6 @@ func _process(delta: float) -> void:
 			continue
 		if body is CharacterBody2D:
 			body.die()
+		if body.get_parent().name == "BoogerCatcher":
+			body.get_parent().booger()
 		queue_free()
