@@ -609,7 +609,7 @@ position = Vector2(32371, -386.9999)
 scale = Vector2(3, 5)
 
 [node name="StaticBody2D45" parent="." unique_id=760893983 instance=ExtResource("6_keoi2")]
-position = Vector2(33959, -562)
+position = Vector2(34269, -645)
 scale = Vector2(3, 10)
 
 [node name="StaticBody2D24" parent="." unique_id=1528973272 instance=ExtResource("6_keoi2")]
@@ -678,6 +678,14 @@ scale = Vector2(15, 5)
 
 [node name="StaticBody2D42" parent="." unique_id=136204333 instance=ExtResource("6_keoi2")]
 position = Vector2(33496.004, 207)
+scale = Vector2(15, 5)
+
+[node name="StaticBody2D46" parent="." unique_id=1058050671 instance=ExtResource("6_keoi2")]
+position = Vector2(36460.004, -2483)
+scale = Vector2(15, 25)
+
+[node name="StaticBody2D47" parent="." unique_id=2025262787 instance=ExtResource("6_keoi2")]
+position = Vector2(37282, 127)
 scale = Vector2(15, 5)
 
 [node name="StaticBody2D40" parent="." unique_id=1174657791 instance=ExtResource("6_keoi2")]
